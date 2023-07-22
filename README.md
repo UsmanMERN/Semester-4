@@ -17,7 +17,6 @@ Welcome to the Semester 4 Books Repository! This repository contains the list of
 
 The repository is organized as follows:
 
-```
 Semester-Books-Repo/
 ├── Computer-Networking/
 │   ├── book1.pdf
@@ -40,7 +39,7 @@ Semester-Books-Repo/
 │   ├── book2.epub
 │   └── ...
 └── README.md
-```
+
 
 ## How to Use
 
