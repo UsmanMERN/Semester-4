@@ -1,0 +1,336 @@
+In simple terms, when a company wants to build a new software system, it's important that they get input from the people 
+who will actually use it. This includes understanding their needs and the tasks they need to perform with the system. 
+Sometimes, companies skip this step and try to build the system based on what they think the users want. 
+This can lead to a lot of problems because the system may not meet the users' needs.
+
+For example, let's say a company builds a new information system for their employees without getting any input from the employees.
+ When they unveil the new system, the employees find it difficult to use and don't like it. 
+The company then has to spend more time and money fixing the system to make it work for the employees. 
+This delays other projects and causes frustration for everyone involved.
+
+In short, it's important for companies to involve users in the requirements development process from the beginning to 
+avoid costly mistakes later on.
+
+This story highlights the importance of involving end-users in the development process from the start. 
+Getting user input and feedback can save time, money, and resources in the long run. 
+It also helps to ensure that the final product meets the needs and expectations of the users.
+Companies should prioritize customer engagement throughout every stage of the project, from the initial planning and design to the 
+testing and implementation phases. This will help to identify potential issues early on and give developers the opportunity to 
+address them before they become major problems.
+By involving end-users in the process, companies can create a more user-friendly system, improve overall customer satisfaction, 
+and avoid costly rework or delays.
+
+
+-------> The expectation gap
+
+When developers create software without involving customers enough, 
+there is a high chance that the final product will not meet the actual needs or expectations of the customers.
+This creates a gap between what customers really need and what developers deliver.
+
+To avoid this expectation gap, it's important for developers to have frequent interaction with customer representatives. 
+This can include things like meetings, interviews, and feedback sessions. By doing this, developers can get a better understanding 
+of what the customers want and make sure they are on the right track to meeting those needs.
+
+For example, let's say you work at a restaurant and your boss wants you to design a new ordering system for customers. 
+Instead of just coming up with an idea and presenting it to your boss, you could have regular conversations with 
+customers to see what features they would like in the new system. You could also create prototypes of the system and get 
+feedback from customers to make sure it meets their needs. By doing this, you can minimize the expectation gap and deliver a 
+system that customers will actually want to use.
+
+
+-----> Who is the customer?
+
+Stakeholders are people, groups or organizations that are involved, affected, or can influence a project. 
+Customers are one type of stakeholder who benefit from a product directly or indirectly. For example, if a company develops a new software product, 
+the customers could be the users of the product or the people who pay for it.
+
+It's important to involve the right stakeholders in a project to make sure all requirements and constraints are understood. 
+Sometimes, stakeholders might be missed out, which can cause delays and problems later on. 
+For example, if a development team is working on a new software system but forgets to talk to the tax department, they might miss important 
+requirements related to tax calculation. This can delay the project by months.
+
+When it comes to developing requirements, business requirements should come from the person who is ultimately accountable for the business value of the product, 
+while user requirements should come from the people who will actually use the product. 
+If there is a disconnect between the acquiring customers and the end users, this can cause major problems.
+
+Conflicts can arise among different stakeholders in a project. For example, business requirements might reflect organizational strategies 
+that are not apparent to users, and users might not want to work with developers who they see as imposing unwanted changes. 
+To manage these conflicts, communication strategies can help build buy-in and avoid hard feelings.
+
+In real life, this can apply to many different types of projects. For example, if a company is developing a new website, 
+the customers could be the users of the website or the marketing team who pays for its development. 
+It's important to involve all the relevant stakeholders to make sure the website meets everyone's needs and objectives.
+
+In order to create a great software product, it's important for the developers and customers (specifically the users of the software) to work together in a partnership. 
+This means that they need to communicate well and understand each other's needs and goals. The business analyst is usually the person who leads this collaboration.
+
+Customers have certain expectations or "rights" when working with developers and BAs during the requirements engineering process. 
+For example, they have the right to expect that the developers and BAs will understand their business and record their requirements accurately. 
+On the flip side, customers also have responsibilities, such as educating the BAs and developers about their business and being specific and 
+timely when providing input about requirements.
+
+A real-life example of this partnership might be a company that wants to create a new project management software. 
+They would work with a team of developers and BAs to design and build the software. The customers (in this case, project managers and their teams) 
+would have the right to expect that the developers and BAs will understand their needs, record their requirements accurately, and provide an 
+environment of mutual respect. The customers would also have the responsibility to dedicate time to clarify their requirements 
+and make timely decisions about them, as well as respect the developers' assessment of feasibility and cost. 
+By working together in this partnership, the team can create a successful project management software that meets the needs of its users.
+
+
+-----> Requirements Bill of Rights for Software Customers
+
+
+To expect BAs to speak your language - Customers should expect that BAs will use business terms and avoid technical jargon during requirements discussions. 
+For example, if a customer is in the healthcare industry, they would expect the BA to use terms like "patient care" instead of technical terms like "EMR".
+
+To expect BAs to learn about your business and your objectives - Customers should expect BAs to take time to understand their specific business 
+needs and how the software fits into their workflow. . Invite them to observe what you and your colleagues do on the job. 
+For example, a customer who owns a restaurant would expect the BA to observe their staff's 
+work processes and understand their menu offerings before designing a new POS system.
+
+To expect BAs to record requirements in an appropriate form - Customers should expect that the requirements documentation will be clear and easy to understand. 
+For example, a customer who runs a retail store would expect the requirements documentation to list all the features and functions that are necessary 
+for their point-of-sale system.
+
+To receive explanations of requirements practices and deliverables - Customers should expect the BA to explain the practices being used to develop the software 
+and explain each deliverable. For example, a customer would expect the BA to explain what wireframes are and how they are used to visualize the layout of the software.
+
+To change your requirements - Customers should expect that they will have the ability to make changes to the requirements as the project progresses. 
+For example, a customer may decide halfway through development that they want to add a new payment method to their e-commerce website.
+
+To expect an environment of mutual respect - Customers should expect the development team to treat them with respect and appreciate their input. 
+For example, a customer would expect the developers to listen to their feedback and suggestions without dismissing them.
+
+To hear ideas and alternatives for your requirements and for their solution - Customers should expect the BA to provide suggestions for improvements 
+and new capabilities that they may not have considered. For example, a customer would expect the BA to suggest integrating social media sharing into 
+their app to increase user engagement.
+
+To describe characteristics that will make the product easy to use - Customers should expect BAs to ask them about quality attributes that make the 
+software easier or more pleasant to use. For example, a customer would expect the BA to ask about accessible design features for users with disabilities.
+
+To hear about ways to adjust requirements to accelerate development through reuse - Customers should expect the BA to suggest reusing existing software 
+components or avoiding unnecessary customizations to save time and money. For example, a customer would expect the BA to suggest using an existing payment 
+gateway integration instead of building a new one from scratch.
+
+To receive a system that meets your functional needs and quality expectations - Customers should expect the final product to meet all their functional 
+requirements and quality expectations. For example, a customer who requested a custom CRM system would expect it to have all the necessary features and be 
+reliable enough to handle their daily business operations.
+
+
+-----> Requirements Bill of Responsibilities for Software Customers
+
+Sure, I can explain each of the 10 responsibilities for software customers in an easy-to-understand way with real-life examples.
+
+Responsibility to educate BAs and developers about your business: As a customer, it is your responsibility to help the development team understand your 
+business needs and objectives. For example, if you own a retail store, you need to explain to the BA how you want customers to interact with your products 
+online and in-store.
+
+Responsibility to dedicate time to provide and clarify requirements: It is important to allocate enough time for requirements elicitation and validation activities. 
+For example, if you're working on developing a mobile app, you should be available for interviews and workshops to discuss the features and functionality that will 
+be included in the app.
+
+Responsibility to be specific and precise when providing input about requirements: You need to ensure that requirements are clear, specific, and focused. 
+For example, instead of asking for "better search functionality" in an e-commerce website, you should specify what kind of searches you want to enable, 
+such as searching by category, price range, or brand.
+
+Responsibility to make timely decisions about requirements when asked: You should respond promptly to requests for decision-making related to requirements. 
+For example, if the developer asks for your input on which payment gateway to use for your e-commerce website, you should provide a timely response so that 
+development can continue without delay.
+
+Responsibility to respect a developer's assessment of the cost and feasibility of requirements: You need to acknowledge that all software 
+functionality has a cost, and developers are best suited to estimate those costs. For example, if you ask for a feature that requires significant 
+customization or development effort, you need to respect the developer's assessment of whether it is feasible within the project timeline and budget.
+
+Responsibility to set realistic requirement priorities in collaboration with developers: You should work collaboratively with developers to identify essential 
+functionalities and prioritize them accordingly. For example, if you're developing a project management tool, you should prioritize features like 
+task management and reporting over less critical features like chat functionality.
+
+Responsibility to review requirements and evaluate prototypes: You need to review requirements as they are developed and provide feedback to ensure that 
+they meet your needs. For example, if you're developing a mobile app, you should review user interface mockups and prototype builds to ensure that the 
+design and functionality align with your expectations.
+
+Responsibility to establish acceptance criteria: You need to define measurable acceptance criteria that developers can use to judge whether the 
+software satisfies your needs. For example, if you're developing an online booking system, you should define acceptance tests that verify the system's 
+ability to handle multiple bookings simultaneously, provide accurate pricing information, and send confirmation emails to users.
+
+Responsibility to promptly communicate changes to the requirements: You need to inform the development team promptly if there are any changes to the requirements. 
+For example, if you change your mind about a certain feature, you need to let the team know as soon as possible so that they can adjust their plans accordingly.
+
+Responsibility to respect the requirements development process: You need to respect the approach used by business analysts to develop and refine the requirements. 
+For example, you should be willing to participate in workshops and interviews to help the BA understand your business needs, 
+even if it requires more time and effort on your part.
+
+
+Creating a culture that respects requirements
+
+Sure, I can explain each point in an easy way with real-life examples:
+
+Lack of developer participation in requirements development: Some developers may not see the value of participating in requirements development. 
+For example, a developer working on a billing system might not understand why they need to attend a meeting to discuss how invoices should be generated. 
+To help them understand, the business analyst could explain that their input will ensure that the system generates accurate and timely invoices, 
+which will save time and reduce errors.
+
+Clash between developers and IT managers: Developers may want detailed input to develop an accounting system, 
+while IT managers prefer brainstorming ideas without any specific elicitation techniques. To resolve this conflict, 
+the business analyst could facilitate a discussion that combines both approaches. 
+For example, the developers could provide input on the technical aspects of the system, 
+while the IT manager could provide strategic input on what the system needs to achieve.
+
+Resistance from users to participate in legacy-system replacement projects: Users may not see the relevance of replacing a legacy system to solve their business problems. 
+For example, a retail store may resist replacing its old point-of-sale system because it does not see the need for a new one. To overcome this resistance, 
+the business analyst could explain how a new system could streamline processes, increase efficiency, and improve customer experience.
+
+Poor previous experiences with requirements processes: Some project team members may have had bad experiences with requirements processes in the past. 
+For example, a developer may have worked on a project where the requirements were incomplete, leading to significant rework later in the project. 
+To address this, the business analyst could demonstrate the benefits of effective requirements practices, 
+such as reducing rework, improving delivery timelines, and enhancing customer satisfaction.
+
+Lack of understanding of the value of requirements practices: Some team members may not appreciate the value of effective requirements practices. 
+For example, a developer may not see how reviewing requirements as they evolve will benefit the project. To address this, 
+the business analyst could explain how early input from developers can improve the quality of requirements and prevent misunderstandings or rework later in the project.
+
+Lack of involvement from stakeholders: Some stakeholders may not feel involved in the requirements development process. 
+For example, a customer may feel that their needs are not being adequately addressed by the requirements documentation. 
+To address this, the business analyst could involve the customer in requirements elicitation activities, such as interviews 
+or workshops, to ensure that their needs and requirements are reflected in the documentation.
+
+Resistance to culture or process change: Some team members may resist changes to the requirements development process or culture. 
+For example, a developer may prefer working in a casual and unstructured environment and resist the introduction of more formal requirements practices. 
+To address this, the business analyst could provide education and reassurance on the benefits of effective requirements practices, such as improving delivery 
+timelines and reducing rework.
+
+Overall, understanding the reasons for resistance and addressing them through education, reassurance, 
+and collaboration can help create a culture that respects requirements and facilitates effective requirements development.
+
+
+-----> Identifying decision makers
+
+
+The decision leader makes the choice, either with or without discussion with others - this means that one person is responsible for making the final decision, 
+and they can do so with or without input from others. An example of this could be a CEO making a decision on behalf of their company without consulting others.
+
+The group votes and the majority rules - this means that everyone in the group gets a say, and the option with the most votes wins. 
+An example could be a group of friends deciding where to go for dinner and agreeing on a restaurant based on the most popular vote.
+
+The group votes, but the result must be unanimous to approve the decision - this means that everyone in the group needs to agree on the decision before it can be made. 
+An example could be a family discussing what movie to watch and everyone needing to agree on one option before watching it.
+
+The group discusses and negotiates to reach a consensus - this means that everyone in the group works together to come up with a decision that everyone can 
+live with and support. An example could be a team of coworkers discussing the best approach for a project and coming to a compromise that satisfies everyone's concerns.
+
+The decision leader delegates authority for making the decision to one individual - this means that the person in charge assigns responsibility for making the decision to 
+someone else. This could be seen in a sports team, where the coach delegates responsibility to the captain to make decisions on the field.
+
+The group reaches a decision, but some individual has veto authority over that decision - this means that even if the group comes to a decision, 
+one person has the power to veto it and stop it from being implemented. An example could be a board of directors voting on a new policy, 
+but the CEO has veto power and can reject it if they feel it's not in the company's best interest.
+
+It's important to remember that there isn't one right or wrong decision-making rule, and different situations may call for different approaches. 
+It's up to the group to decide on the best way to make decisions based on their specific circumstances.
+
+
+Reaching agreement on requirements
+
+Sure, I can explain the main points of this passage in simpler terms and provide some examples.
+
+The passage is talking about the process of agreeing on what a product needs to be able to do before it is built. 
+This agreement involves different groups of people, including customers, developers, testers, and management.
+
+One way that organizations often show they have agreed on these requirements is by having stakeholders "sign off" on them. 
+This means they formally approve of the requirements and agree to move forward with building the product based on those requirements.
+
+However, sometimes people don't take the sign-off process seriously. 
+For example, a customer representative might sign off on the requirements without actually reading them carefully, 
+just because they feel pressured to get the project moving. Or a development manager might use sign-off as an excuse to resist any changes to the requirements later on.
+
+To avoid problems like these, it's important to make sure everyone involved in the sign-off process understands exactly what they are agreeing to. 
+They should also understand that requirements will likely change over time as the project progresses. Sign-off should be seen as a milestone, 
+not a weapon, and all parties should have a clear understanding of what it means for the project going forward.
+
+For example, let's say a group of people are working on building a new app that helps users find local restaurants. 
+The customers might have certain requirements, such as being able to search for restaurants by cuisine type or location. 
+The developers might have to make sure those requirements are technically feasible and can be implemented within the time and budget constraints of the project. 
+Testers might need to make sure they can verify that the app actually works the way it's supposed to.
+And management might want to make sure the app meets certain business goals, such as improving customer retention or increasing revenue.
+
+Once everyone agrees on the requirements, they might sign off on them to indicate their approval. 
+However, if the customers later realize they need to add a new requirement, they might have to go through a change request 
+process to update the requirements and get everyone's approval again.
+
+
+The requirements baseline
+
+
+Sure! This passage is talking about the importance of establishing a baseline for requirements agreement.
+
+A requirements baseline is a set of requirements that has been reviewed and agreed upon by all stakeholders 
+involved in the development of a software product or application. It serves as a starting point for further development.
+
+When all parties agree to a particular set of requirements, they should also agree on how changes to those 
+requirements will be managed going forward. This could be through a formal process such as change control, 
+which ensures that any proposed changes are analyzed for their impact on cost, resources, schedule, and other factors.
+
+This approach helps reduce friction and misunderstandings that can arise during the course of a project. 
+It gives everyone involved confidence that they're all on the same page and working towards the same vision.
+
+For example, let's say you're part of a team developing a new mobile app. The customer management/marketing 
+team may want to ensure that the app doesn't become too bloated with features and lose its focus. 
+The user representatives may want to make sure that the app works well for their target audience, 
+even if they didn't think of every requirement before construction began. 
+The development management team may want to balance functionality with cost, schedule, and quality. 
+The business analysts and project managers may want to manage changes in a way that minimizes chaos. 
+And the quality assurance and test teams need to be confident that they can develop effective test scripts and be fully prepared for their activities.
+
+Having an explicit agreement on the requirements baseline helps to forge a collaborative partnership between the customers and developers towards project success.
+
+
+What if you don’t reach agreement?
+
+This passage is discussing the challenges of achieving sign-off from all stakeholders involved in a software development project. 
+Some stakeholders may be difficult to reach, busy, or reluctant to commit for fear of being held accountable later. 
+This can lead to analysis paralysis, where progress on the project is stalled due to a lack of agreement on requirements.
+
+One option some teams use is to send out an email saying that if stakeholders don't reply by a certain deadline, 
+their silence will be taken as agreement. However, this approach risks straining relationships and doesn't address 
+the underlying reasons why stakeholders may be hesitant to commit.
+
+Instead, it's better to move forward cautiously with the assumption that not all stakeholders have approved the requirements. 
+It's important to document this fact and the likely impact of missing or incorrect requirements on the project's risk list. 
+Follow up with these stakeholders and let them know that while the project is moving forward with the current requirements baseline, 
+there is still a process in place to make changes if necessary.
+
+For example, imagine you're working on a project to develop a new accounting software system for a company. 
+One of the stakeholders is the head of finance, who is difficult to reach and has concerns about committing to the requirements. 
+Rather than forcing a sign-off or assuming tacit approval, you would document the stakeholder's 
+hesitations and the potential risks of missing or incorrect requirements related to financial reporting.
+You would then follow up with the stakeholder directly and explain that while the project is moving forward with the current requirements baseline, 
+there is still a process in place to make changes if necessary. This helps to manage communications and 
+maintain positive relationships with all stakeholders while keeping the project moving forward.
+
+
+Agreeing on requirements on agile projects
+
+
+This passage is discussing how requirements are handled on agile projects. 
+Unlike traditional project management approaches, agile projects do not involve a formal sign-off action. 
+Instead, requirements are maintained in the form of user stories in a product backlog. 
+The product owner and the team agree on what stories will be developed in the next iteration based on their priority and the team's productivity.
+
+While there is no attempt to achieve stakeholder approval on the full scope of requirements for the project up front, 
+the vision and other business requirements do need to be established at the outset. The ultimate "sign-off" on 
+agile projects is acceptance of the working, tested software delivered from each iteration.
+
+However, some clients may still request a sign-off even in an agile development life cycle. 
+In this case, the BA team can ask the users to "sign off" that, at that moment in time, there were no major requirements missing that they knew about,
+ and there were no major issues with what had been written down. 
+This approach allows the spirit of agile methods to prevail while keeping open the possibility of changes later on.
+
+In general, it's important to maintain a balance between the rights and responsibilities of all stakeholders involved in a software project. 
+It's helpful to identify the customers responsible for providing business and user requirements and discuss the Bill of Rights and Responsibilities
+ with them to ensure everyone is on the same page. If necessary, modify these documents as appropriate to reach agreement.
+
+It's also important to learn from past experiences where customer engagement was lacking and quantify the risks associated with that. 
+For example, if a lack of customer participation led to late requirements changes or missed business opportunities, 
+use that experience to convince others of the importance of customer engagement going forward.
+
+Overall, the goal is to work collaboratively with all stakeholders to ensure the success of the software project.

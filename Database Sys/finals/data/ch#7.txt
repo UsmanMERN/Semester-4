@@ -1,0 +1,163 @@
+Mapping Simple Objects:
+Mapping simple objects involves directly representing the attributes of the object as columns in a relational table. Each attribute corresponds to a column, and each instance of the object is represented as a row in the table.
+
+Example:
+Consider a simple object "Person" with attributes "ID," "Name," and "Age." The mapping of this object to a relational table could be as follows:
+
+Person Table:
+| ID | Name  | Age |
+|----|-------|-----|
+| 1  | John  | 25  |
+| 2  | Sarah | 30  |
+| 3  | Alex  | 40  |
+
+
+Mapping Composite Objects:
+Mapping composite objects requires decomposing the object into its component attributes and mapping them to separate tables. Each component attribute becomes a column in the respective table. Additionally, you can establish relationships between the tables using foreign keys to maintain the composition relationship.
+
+Example:
+Consider a composite object "Address" with attributes "Street," "City," and "ZipCode." The mapping of this object to relational tables could be as follows:
+
+Address Table:
+| AddressID | Street     | City    | ZipCode |
+|-----------|------------|---------|---------|
+| 1         | Main St    | New York| 10001   |
+| 2         | Elm St     | Boston  | 02108   |
+| 3         | Oak St     | Chicago | 60601   |
+
+
+Converting 1:1 Compound Objects:
+Converting 1:1 compound objects involves merging the attributes of both objects into a single table. The primary key of one object becomes the primary key of the combined table, and the attributes of the other object become additional columns in the table.
+
+Example:
+Consider a 1:1 compound object "Employee" with attributes "EmployeeID," "Name," and "Department." The mapping of this object to a relational table could be as follows:
+
+Employee Table:
+| EmployeeID | Name  | Department |
+|------------|-------|------------|
+| 1          | John  | Sales      |
+| 2          | Sarah | Marketing  |
+| 3          | Alex  | Finance    |
+
+
+Converting 1:N Compound Objects:
+Converting 1:N compound objects involves mapping the "one" side of the relationship to its own table and the "many" side to a separate table. The primary key of the "one" side table becomes the foreign key in the "many" side table to establish the relationship.
+
+Example:
+Consider a 1:N compound object "Department" with attributes "DepartmentID" and "Name," and "Employee" with attributes "EmployeeID" and "Name." The mapping of these objects to relational tables could be as follows:
+
+Department Table:
+| DepartmentID | Name      |
+|--------------|-----------|
+| 1            | Sales     |
+| 2            | Marketing |
+| 3            | Finance   |
+
+Employee Table:
+| EmployeeID | Name  | DepartmentID |
+|------------|-------|--------------|
+| 1          | John  | 1            |
+| 2          | Sarah | 1            |
+| 3          | Alex  | 2            |
+
+
+Converting M:N Compound Objects:
+Converting M:N compound objects involves creating an associative table that represents the relationship between the two objects. The associative table contains foreign keys referencing the primary keys of both objects to establish the many-to-many relationship.
+
+Example:
+Consider an M:N compound object "Student" with attributes "StudentID" and "Name," and "Course" with attributes "CourseID" and "Title." The mapping of these objects to relational tables could be as follows:
+
+Student Table:
+| StudentID | Name   |
+|-----------|--------|
+| 1         | John   |
+| 2         | Sarah  |
+| 3         | Alex   |
+
+Course Table:
+| CourseID | Title         |
+|----------|---------------|
+| 1        | Mathematics   |
+| 2        | History       |
+| 3        | Literature    |
+
+Enrollment Table (Associative Table):
+| StudentID | CourseID |
+|-----------|----------|
+| 1         | 1        |
+| 1         | 2        |
+| 2         | 1        |
+| 3         | 3        |
+
+
+Mapping Hybrid Objects:
+Mapping hybrid objects involves combining different object types into a single table by including attributes for each object type. This allows for flexibility in accommodating various types of objects in a single table.
+
+Example:
+Consider a hybrid object "Product" that can be either a "Book" or a "Movie." The "Book" has attributes "ISBN" and "Author," while the "Movie" has attributes "Title" and "Director." The mapping of this object to a relational table could be as follows:
+
+Product Table:
+| ProductID | Type  | ISBN       | Author       | Title           | Director     |
+|-----------|-------|------------|--------------|-----------------|--------------|
+| 1         | Book  | 9781234567 | John Smith   |                 |              |
+| 2         | Movie |            |              | The Matrix      | Lana Wachowski|
+| 3         | Book  | 9789876543 | Jane Doe     |                 |              |
+
+
+Mapping Association Objects:
+Mapping association objects involves creating a separate table to represent the association between two objects. The association table contains foreign keys referencing the primary keys of the associated objects, along with any additional attributes related to the association.
+
+Example:
+Consider an association object "OrderItem" that connects "Order" and "Product" entities. The "Order" has attributes "OrderID" and "OrderDate," while the "Product" has attributes "ProductID" and "ProductName." The mapping of this object to relational tables could be as follows:
+
+Order Table:
+| OrderID | OrderDate  |
+|---------|------------|
+| 1       | 2021-01-01 |
+| 2       | 2021-02-05 |
+| 3       | 2021-03-10 |
+
+Product Table:
+| ProductID | ProductName   |
+|-----------|---------------|
+| 1         | Book          |
+| 2         | DVD           |
+| 3         | Electronics   |
+
+OrderItem Table (Association Table):
+| OrderID | Product
+
+| ProductID |
+|---------|-----------|
+| 1       | 1         |
+| 1       | 2         |
+| 2       | 3         |
+| 3       | 1         |
+
+
+Mapping Super/Subtype Objects:
+Mapping super/subtype objects involves creating separate tables for each subtype and a common table for shared attributes (super type). The subtype tables have their own specific attributes, and the common table holds the shared attributes. The subtype tables are linked to the common table using the primary key of the common table.
+
+Example:
+Consider a super type "Vehicle" with subtypes "Car" and "Motorcycle." The "Vehicle" has attributes "VehicleID" and "Manufacturer," while the "Car" has additional attributes "Model" and "NumDoors," and the "Motorcycle" has additional attributes "Brand" and "EngineCapacity." The mapping of these objects to relational tables could be as follows:
+
+Vehicle Table (Super Type):
+| VehicleID | Manufacturer |
+|-----------|--------------|
+| 1         | Toyota       |
+| 2         | BMW          |
+| 3         | Harley-Davidson |
+
+Car Table (Subtype):
+| VehicleID | Model | NumDoors |
+|-----------|-------|----------|
+| 1         | Camry | 4        |
+| 2         | X5    | 5        |
+
+Motorcycle Table (Subtype):
+| VehicleID | Brand | EngineCapacity |
+|-----------|-------|----------------|
+| 3         | Sport | 1000cc         |
+
+
+By mapping objects to relational tables, you can represent the structure and relationships of the objects in a database. The appropriate mapping approach depends on the nature of the objects and the requirements of the application.

@@ -1,0 +1,12 @@
+.head {
+  color: red;
+  background-color: aqua;
+}
+.main {
+  background-color: black;
+  color: azure;
+}
+.foot {
+  background-color: blue;
+  color: orange;
+}

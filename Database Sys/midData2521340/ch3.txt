@@ -1,0 +1,25 @@
+Chapter 3: Entity-Relationship Model
+
+Entity-Relationship Model:
+The Entity-Relationship (E-R) model is a conceptual data model used to represent the structure and relationships of data in a database system. It uses entities to represent real-world objects or concepts, attributes to describe the properties of entities, and relationships to represent the associations between entities. The E-R model provides a graphical representation called an E-R diagram.
+
+Elements of the E-R Model:
+
+Entity: An entity is a distinct object, concept, or thing in the real world that can be uniquely identified. It is represented by a rectangle in an E-R diagram and has attributes that describe its properties.
+
+Attribute: An attribute is a characteristic or property of an entity. It represents a piece of information associated with an entity. Attributes are depicted as ovals in an E-R diagram and can be of different types, such as text, numeric, date, or boolean.
+
+Relationship: A relationship represents an association or connection between two or more entities. It describes how entities are related to each other. Relationships are depicted as diamonds in an E-R diagram and can have cardinality constraints, such as one-to-one, one-to-many, or many-to-many.
+
+E-R Diagram:
+An E-R diagram is a visual representation of the entities, attributes, and relationships in the E-R model. It uses symbols such as rectangles for entities, ovals for attributes, and diamonds for relationships. Lines connect the entities and relationships, indicating the associations between them. The E-R diagram provides a clear and concise overview of the database structure.
+
+Degree of Relationships:
+The degree of a relationship refers to the number of entities participating in the relationship. It can be classified as follows:
+
+Unary Relationship: A relationship where an entity is associated with itself.
+Binary Relationship: A relationship involving two entities.
+Ternary Relationship: A relationship involving three entities.
+n-ary Relationship: A relationship involving more than three entities.
+Subtype and Supertype Entities:
+In some cases, entities may have shared characteristics, and it is beneficial to represent them as a group. The entity with common attributes is called a supertype, and the individual entities within the group are called subtypes. Subtypes inherit the attributes and relationships of the supertype while adding their own specific attributes and relationships. This modeling technique allows for better organization and representation of similar entities.

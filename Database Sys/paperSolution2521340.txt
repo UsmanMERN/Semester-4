@@ -1,0 +1,163 @@
+2521240
+answer of queastion 1
+Logical database design refers to the process of creating a structured representation of a database system that defines the relationships between entities and their attributes. It involves translating the conceptual design into a more detailed and organized form that can be implemented in a database management system (DBMS).
+
+The logical database design process encompasses various activities:
+
+Requirements Analysis: Gather and analyze the requirements of the shopping store system. Understand the purpose, functionality, and scope of the system. Identify the key entities and their characteristics, relationships, and data constraints.
+
+Entity-Relationship (ER) Modeling: Create an Entity-Relationship (ER) diagram to represent the entities, attributes, and relationships within the system. Entities represent the distinct objects or concepts in the system, attributes define their properties, and relationships define the associations between entities.
+
+Normalization: Apply normalization techniques to eliminate data redundancy, improve data integrity, and optimize the database structure. Normalize the entities and attributes to remove any repeating groups and dependencies.
+
+Data Integrity and Constraints: Define integrity constraints to ensure the accuracy and consistency of data. This involves identifying primary keys, foreign keys, and establishing referential integrity rules. Constraints help enforce relationships between entities and maintain data integrity.
+
+Schema Design: Determine the logical structure of the database by specifying the tables, attributes, and relationships based on the ER diagram. Define the data types and constraints for each attribute. This step involves organizing the entities into tables and identifying the primary and foreign keys.
+
+Data Flow Diagram (DFD) Creation: Develop a data flow diagram to illustrate the flow of data within the shopping store system. A DFD shows the inputs, outputs, processes, and data storage within the system. It visually represents how data moves from one element to another.
+ the system of a shopping store and list different entities in the system with their characteristics:
+
+Entities:
+
+Customer: Characteristics may include customer ID, name, contact information, address, loyalty points, purchase history.
+Product: Characteristics may include product ID, name, description, price, quantity in stock, supplier information.
+Order: Characteristics may include order ID, customer ID, order date, total amount, payment status.
+Payment: Characteristics may include payment ID, order ID, payment date, payment method, amount.
+Supplier: Characteristics may include supplier ID, name, contact information, address, product categories supplied.
+To depict the data processing and movement among different elements of the system, you can create a data flow diagram (DFD) using various design tools such as Microsoft Visio, Lucidchart, or online diagramming tools like draw.io.
+
+Here's a simplified example of a DFD for a shopping store system:
+        +-----------------------+
+        |      Shopping Store   |
+        +-----------------------+
+                   |
+                   v
+        +-----------------------+
+        |      Customer         |
+        +-----------------------+
+                   |
+                   v
+        +-----------------------+
+        |      Product          |
+        +-----------------------+
+                   |
+                   v
+        +-----------------------+
+        |       Order           |
+        +-----------------------+
+                   |
+                   v
+        +-----------------------+
+        |       Payment         |
+        +-----------------------+
+                   |
+                   v
+        +-----------------------+
+        |      Supplier         |
+        +-----------------------+
+This diagram represents the flow of data between different elements of the shopping store system. Customers interact with the system by placing orders, which involve products, payments, and interactions with suppliers.
+
+Remember to consider the specific requirements of your shopping store system and customize the logical database design process and the resulting DFD accordingly.
+
+
+
+
+answer 2
+
+ we can design an Entity-Relationship Diagram (ERD) to represent the film production house system. Here's the ERD design:
++---------------------------------+
+|           Film Production House |
++---------------------------------+
+              |
+              |
+              |        1          owns
+              +------------------------+
+              |         Studio         |
+              +------------------------+
+              | * studioID (Primary Key)
+              |   owner
+              |   banner
+              +------------------------+
+                            |
+                            |
+                            |   1
++-------------------------+ | +-------------------------+
+|           Film          | | |         Actor           |
++-------------------------+ | +-------------------------+
+| * filmID (Primary Key)  | | | * actorID (Primary Key) |
+|   name                  | | |   name                  |
+|   year                  | | |   address               |
+|   duration              | | |   contactNumber         |
+|   category              | | +-------------------------+
+|   studioID (Foreign Key)| |
++-------------------------+ |
+                            |
+                            |
+                            |  0..*         acts in
+                            +-----------------------+
+                            |      FilmActor        |
+                            +-----------------------+
+                            | * filmID (Foreign Key)|
+                            | * actorID (Foreign Key)|
+                            +-----------------------+
+
+Explanation of the ERD:
+
+The main entity is "Film Production House" which represents the entire system.
+"Film Production House" is connected to "Studio" in a one-to-many (1:N) relationship, indicating that one production house can own multiple studios.
+"Studio" has attributes like "studioID" (primary key), "owner," and "banner."
+"Film" has attributes like "filmID" (primary key), "name," "year," "duration," "category," and "studioID" (foreign key) to associate the film with the studio it is shot in.
+"Actor" has attributes like "actorID" (primary key), "name," "address," and "contactNumber."
+"Actor" is connected to "Studio" in a many-to-many (M:N) relationship through the "FilmActor" entity. This represents that an actor can be associated with multiple studios, and a studio can have multiple actors.
+The "FilmActor" entity serves as a bridge table, containing foreign keys "filmID" and "actorID" to establish the M:N relationship between actors and studios.
+Key:
+
+Primary keys are denoted by asterisks (*).
+Foreign keys are specified to establish relationships between entities.
+Cardinality Ratios:
+
+"Film Production House" to "Studio": 1:N (One production house can own multiple studios, but a studio is owned by only one production house.)
+"Studio" to "Film": 1:N (One studio can be associated with multiple films, but a film is shot in only one studio.)
+"Actor" to "Studio": M:N (An actor can be connected to multiple studios, and a studio can have multiple actors.)
+"Film" to "Actor" (through "FilmActor"): M:N (An actor can act in multiple films, and a film can have multiple actors.)
+Symbols:
+
+Rectangles represent entities.
+Diamonds represent relationships.
+Lines represent the connections between entities.
+Note: This is a basic representation of the system based on the given specifications. Additional entities and attributes can be included as per the specific requirements of the film production house system.
+
+Answer 3
+A three-level architecture diagram represents the division of a system into three distinct layers: the presentation layer, the application layer, and the data layer. Each layer serves a specific purpose and involves different activities and users. Here's an explanation of each level:
+
+Presentation Layer:
+The presentation layer, also known as the user interface layer, is the topmost layer of the architecture. It focuses on the presentation and interaction with the end-users. This layer handles the user interface components, such as web pages, forms, or graphical interfaces, allowing users to interact with the system. Activities at this layer involve user input, displaying information, and capturing user actions. Users at this layer include clients, end-users, or external systems that interact with the system.
+
+Application Layer:
+The application layer, sometimes called the business logic layer, resides between the presentation layer and the data layer. It encapsulates the core functionality and processes of the system. This layer handles the processing and manipulation of data, business rules, and system behavior. Activities at this layer involve data validation, processing user requests, implementing business logic, and coordinating data flow between the presentation and data layers. Users at this layer include application servers, middleware components, or service providers.
+
+Data Layer:
+The data layer, also known as the data storage layer or database layer, is the bottommost layer of the architecture. It deals with the storage and management of data. This layer includes databases, data storage systems, and related infrastructure. Activities at this layer involve storing, retrieving, updating, and managing data in a secure and efficient manner. Users at this layer include database administrators (DBAs) and other authorized personnel responsible for managing and maintaining the databases.
+
+Answer 4
+a) Referential integrity in two tables ensures that the relationship between two tables is maintained, and no orphaned records exist. It is defined as a constraint that ensures that a foreign key value in one table exists in the primary key of another table. It affects the relationship between two tables by enforcing the consistency of the data, preventing any deletion or modification that violates the relationship.
+
+b) Cardinality constraints determine the number of associations between entities in a relationship. It specifies the minimum and maximum number of entities that can be associated with each other. The minimum cardinality represents the minimum number of entities that must be present in a relationship, and the maximum cardinality represents the maximum number of entities that can be present in a relationship. These constraints are represented using symbols as follows:
+
+One-to-one (1:1): Each entity in one set is associated with one and only one entity in another set.
+One-to-many (1:N): Each entity in one set is associated with zero, one, or many entities in another set.
+Many-to-one (N:1): Many entities in one set are associated with one and only one entity in another set.
+Many-to-many (N:M): Many entities in one set are associated with zero, one, or many entities in another set, and vice versa.
+c) Various types of keys used to identify data are:
+
+Primary Key: A unique identifier for a record in a table.
+Foreign Key: A field in a table that refers to the primary key of another table.
+Candidate Key: A column or set of columns that can uniquely identify a record in a table.
+Super Key: A set of one or more columns that can uniquely identify a record in a table.
+Composite Key: A combination of two or more columns that uniquely identifies a record in a table.
+d) Data definition refers to the process of defining the structure and characteristics of the data stored in a database. It includes defining tables, columns, data types, and constraints. To protect data in a database environment, several measures can be taken, such as:
+
+Access Control: Limiting access to data to authorized users only.
+Encryption: Securing data by converting it into a secret code that can be decrypted only by authorized users.
+Backup and Recovery: Regularly backing up data and having a disaster recovery plan to minimize data loss in case of any mishap.
+Auditing and Logging: Monitoring and tracking user activity and changes made to the database for accountability and detecting any unauthorized access.
