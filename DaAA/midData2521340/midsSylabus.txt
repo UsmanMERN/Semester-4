@@ -1,0 +1,12 @@
+Pointers
+Complexity Equations
+Approaches of Algorithms 
+Hungry 
+Greedy
+Divide and Conquer
+Brute Force
+Principles of OO and Procedural Programming
+Principles of Problem Definition by Discrete Analysis of Statement
+ADT(abstract data type)
+Recursion and Iteration
+primitive & Non-Primitive

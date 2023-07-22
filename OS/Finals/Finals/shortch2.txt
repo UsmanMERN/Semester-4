@@ -1,0 +1,158 @@
+Operating System Services:
+Operating systems provide various services to the user and the system itself.
+        
+       1 -->  those that assist users in interacting with the computer
+        2-->   those that ensure the efficient operation of the system through resource sharing. 
+
+--> User Interface
+    --> CLI (command line interface)by typing text
+    -->GUI graphical elements
+    such as buttons, menus etc
+    ---> batch set of commands as a scripting
+
+---> Program execution (responsible for loading program into memory and execution, manages the executions)
+
+----> i/o operation(involve interaction between the running program and the external devices)
+
+---> communication (allow the processes to exchange the information with each other)
+
+----> error detection
+
+----> Resource Allocation()
+
+----> Accounting (Operating systems keep track of the resources utilized by each user or job.)
+
+----> Protection and Security
+
+
+User Operating System Interface - Command Line Interface (CLI):
+
+-----> Command Entry
+-----> Kernel or Systems Program Implementation
+-----> Multiple Flavors (Shells)
+-----> Built-in Commands and External Programs
+------> Extensibility(
+In CLI environments, it's possible to add new features and commands without modifying the shell itself. This extensibility allows users to create custom scripts, aliases, or functions to enhance their productivity.)
+
+
+User Operating System Interface - Graphical User Interface (GUI):
+
+-----> Desktop Metaphor(
+The GUI uses a desktop metaphor, which means that the screen is designed to resemble a physical desktop. Users can place icons representing files, folders, and applications on the desktop and manipulate them with familiar actions, such as dragging and dropping.)
+-----> Input Devices(A GUI typically utilizes input devices such as a mouse, keyboard, and monitor. The mouse is used to point, click, and drag objects on the screen, while the keyboard is used for typing and entering text.
+)
+-----> Icons Representation(:
+Icons are graphical symbols that represent files, applications, actions, and other elements of the operating system. Users can interact with these icons to perform various tasks.)
+-----> Mouse Actions(
+Different mouse actions over objects in the GUI interface trigger various actions. For example, clicking on an icon can open the associated application, right-clicking can provide options like a context menu, and dragging an icon allows users to move or copy files.)
+----->Windows and Multitasking(
+GUIs allow multiple applications to run concurrently in separate windows. Users can switch between windows and perform multitasking, where multiple applications are active and running simultaneously.)
+
+
+***     System Calls and APIs     ***
+
+System calls serve as the programming interface between user-level applications and the operating system. They provide a way for applications to request services from the operating system kernel, such as performing I/O operations, managing processes, accessing files, and more. System calls are essential for enabling user programs to interact with the underlying hardware and resources of the computer system.
+
+----> Programming Interface(System calls define a standardized set of functions and data structures that applications can use to request services from the operating system)
+----->Implementation in High-Level Language(System calls are typically implemented in a high-level programming language like C or C++. This allows developers to write user-level programs using familiar language constructs and data types.)
+----->High-Level Application Program Interface API(Although system calls provide direct access to operating system services, most programs access these services through a higher-level Application Program Interface (API). )
+-----> Common APIs
+
+
+***          System Call Implementation     ***
+
+----> System Call Numbers(Each system call is given a unique number. These numbers serve as identifiers for different system calls. For example, a number may represent the "open file" operation, another for "read data," and so on.)
+----> System Call Table(The system-call interface maintains a table that maps these system call numbers to the corresponding functions or routines in the operating system kernel. This table acts like a dictionary, allowing the operating system to quickly look up the correct function when a system call is requested.)
+----> Invoking System Calls(When a program wants to make a system call, it uses a special instruction provided by the operating system to transition from user mode to kernel mode. In kernel mode, the program gains access to protected resources and can execute privileged instructions, such as system calls.)
+----> Kernel Execution(
+Once the system call is invoked, the system-call interface uses the system call number to locate the corresponding function in the system call table. The kernel then executes the appropriate function to perform the requested operation.)
+----> Return Status and Values
+(After the system call is executed, the operating system provides a return status to the calling program. The status indicates whether the system call was successful or if an error occurred during execution. Additionally, some system calls may also return values that contain information or data requested by the program.)
+-----> Return Status and Values(
+After the system call is executed, the operating system provides a return status to the calling program. The status indicates whether the system call was successful or if an error occurred during execution. Additionally, some system calls may also return values that contain information or data requested by the program.)
+
+
+***      System Call Parameter Passing       ***
+
+When a program makes a system call to request a service from the operating system, it often needs to pass additional information or data to the OS so that the requested operation can be performed correctly. The exact type and amount of information required by each system call vary depending on the operating system and the specific call. 
+
+----> Passing Parameters in Registers
+----> Parameters Stored in Memory Block (Table)
+----> Parameters Passed via the Stack
+
+***             Types of System Calls   ***
+
+-----> Process Control(
+Process control system calls allow programs to create, manage, and control processes.)
+-----> File Management(
+File management system calls handle operations related to files and directories.)
+-----> Device Management(
+Device management system calls control and interact with I/O devices, such as printers, keyboards, and disks.)
+-----> Information Maintenance(
+Information maintenance system calls allow programs to access and modify system information, such as time, date, system configuration, and system status)
+-----> Communications(
+Communication system calls enable processes to exchange data and information with each other, either within the same computer or between computers over a network. )
+-----> Protection(
+Protection system calls are responsible for enforcing security and access control mechanisms in the operating system.)
+
+***         System Programs         ***
+-----> File Manipulation(
+File manipulation system programs are responsible for creating, deleting, copying, renaming, printing, dumping, listing, and generally managing files and directories on the computer's storage system. These programs enable users to interact with files and perform operations on them.)
+---->Status Information(
+Status information system programs allow users to query the system for various details, such as the current date, time, available memory, disk space, number of logged-in users, and other performance-related information.)
+---->File Modification(
+File modification system programs include text editors that allow users to create and modify files. Additionally, there are special commands to search for specific content within files or perform text transformations.)
+---->Programming Language Support(
+These system programs provide support for programming languages, including compilers, assemblers, debuggers, and interpreters. They help developers in writing, testing, and debugging their programs.)
+---->Program Loading and Execution(
+Program loading and execution system programs are responsible for loading and running programs on the computer. They manage different types of loaders and debugging tools to facilitate program execution.)
+---->Communications(
+Communication system programs facilitate virtual connections among processes, users, and computer systems. They enable users to exchange messages, browse the web, send emails, remote logins, and transfer files between machines.)
+
+
+***Operating System Design and Implementation***
+Designing and implementing an operating system is a complex and challenging task. While there is no one-size-fits-all solution, successful approaches have been identified. The internal structure of different operating systems can vary significantly, depending on factors such as hardware choice and the type of system being developed.
+
+----> Defining Goals and Specifications:
+        --->User Goals (Users expect the operating system to be easy to use, learn, and reliable. )
+        ----> System Goals( From the system's perspective, the operating system should be easy to design, implement, and maintain.)
+----> Separation of Policy and Mechanism
+        ---> Policy (Refers to the decisions about what actions the operating system should take in various situations.)
+        ---> Mechanism (Refers to the implementation details of how the operating system carries out the chosen policies. It involves the technical procedures and algorithms used to perform specific tasks.) 
+
+*** structure ***
+
+--->Simple Structure - MS-DOS(
+MS-DOS was a simple operating system that aimed to provide basic functionality using minimal resources. It lacked a clear division into separate modules or layers. Everything in MS-DOS was tightly integrated, making it less organized and challenging to maintain. An analogy is a small studio apartment where all functions (eating, sleeping, working) share the same space without clear separation.)
+--->Layered Approach(
+The layered approach divides the operating system into different levels or layers. Each layer builds upon the lower layers, creating a modular and hierarchical structure. Like a layered cake, each layer serves as a foundation for the next one. Each layer only interacts with the layer directly beneath it, making it easier to manage and modify specific functions.)
+--->Traditional UNIX System Structure(
+The original UNIX operating system had limited structuring due to hardware constraints. It consists of two main parts: system programs and the kernel. The kernel is the core of the operating system, handling essential functions like file systems and memory management. However, in traditional UNIX, many functions are concentrated within the kernel, leading to a less organized system.)
+--->Microkernel System Structure(
+The microkernel structure moves most of the operating system's functions out of the kernel and into user space. The kernel focuses on providing only essential services like process management and communication between user modules. It simplifies the kernel, making it more reliable and secure.)
+
+*** Modules in Modern Operating Systems ***
+Object-Oriented Approach(
+Using an object-oriented approach means that the operating system's core components are organized into individual modules, much like separate objects with their own defined responsibilities and interfaces.)
+Separation of Core Components(
+Each core component, such as process management, memory management, file systems, and device drivers, is isolated into its own module. This separation allows better organization and easier maintenance.)
+Communication via Known Interfaces(
+Modules interact with each other through well-defined interfaces. These interfaces serve as a standard way for modules to exchange information and perform operations, ensuring smooth communication between different parts of the system.)
+Loadable Kernel Modules(
+A significant advantage of the modular design is that modules can be dynamically loaded into the kernel as needed. This allows the operating system to use only the required functionalities, saving memory and resources.)
+Flexibility and Modularity(
+Overall, the use of modules provides a more flexible and modular design compared to traditional approaches like layers. Modules can be added, removed, or updated without affecting other parts of the system, making it easier to extend and maintain the operating system.)
+
+*** Solaris Modular Approach ***
+same as the above described
+
+*** Virtual Machines ***
+A virtual machine (VM) is a software-based emulation of a computer system that runs on top of a physical host machine. It takes the layered approach to its logical conclusion, treating the hardware and the operating system kernel as though they were all hardware. The virtual machine provides an interface that is identical to the underlying bare hardware, creating an illusion of a separate and independent computer system
+
+*** Para-virtualization ***
+Para-virtualization is a variation of virtualization where the guest operating system is presented with a system that is similar but not identical to the actual hardware. To run on paravirtualized hardware, the guest must be modified accordingly.
+
+*** Operating-System Debugging ***
+
+just read out its simple 
+ma abi khod nai dakha ya 

@@ -1,0 +1,104 @@
+Recursion:
+	A Recursive Function has Two parts one is Base Case and other is Function call itselve untile the base Case is not achived(auctuall Function Dosent call itselves but Replecate itselve)
+
+		
+
+Pointers
+
+
+
+
+
+Readable
+Writeable
+Executable
+Orthogonality
+
+Size of Different type of Variables:
+
+	char: Usually 1 byte
+	short: Usually 2 bytes
+	int: Usually 4 bytes
+	long: Usually 4 bytes (or 8 bytes on 64-bit systems)
+	long long: Usually 8 bytes
+	float: Usually 4 bytes
+	double: Usually 8 bytes
+	long double: Usually 8 bytes or more
+	bool: Usually 1 byte
+	The size of a pointer depends on the architecture. In 32-bit systems, it 	is typically 4 bytes, and in 64-bit systems, it is 8 bytes
+
+
+
+Abstract Data Type(ADT)
+	
+	Primitive
+	Non Primitive
+		
+		Consecutive Homogeneous data type(with in column)
+		Consecutive Heterogeneous data type(between Column)
+
+
+
+Diff b/w tracing and traversing
+
+Complexity Eqs
+
+
+OPP / Procedural programming
+
+
+Browser use Weak Language why
+
+
+web (server Side/client Side, Static website, server page)
+
+
+3 tires of Software Development
+	Frontend
+	Middle Layer-> file/XML/Json
+	Backend
+
+Frontend Has 4 parts:
+	Presentation of information
+	Information Integration
+	Information Management
+	Information Communication
+
+
+
+XML
+
+
+POST(Power on Self Test)
+Explain and write POST Algo
+
+
+1st Generation Language
+2nd generation Language
+What type of algo are used in Assembly Language
+Define various Assembly Languages
+Why C++,java,PHP,C#,...etc are called 3rd Generation language and Depends on 2nd Gen Language
+Whats 4th Gen language Like(SQL)
+5th gen language(ChatGPt)
+
+
+
+
+Hungary	
+	Greedy
+	Cat Swan
+	Monkey Snatch
+	Be Swan
+	Bio inspired algorithums
+	ScoTopastic Algo
+	Self Healing
+	Brute force 
+	Divide and Conqure
+	Binary Search
+	Factorial
+	Tower of Hanoi
+	Fibonacci Series
+	Bubble Sort 
+	Quick Sort
+	Merge Sort
+	Insertion Sort

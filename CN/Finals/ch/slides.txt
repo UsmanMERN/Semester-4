@@ -1,0 +1,228 @@
+1-->Slide
+
+->Data Transmission(sending data divice to device)
+	Data Encoding/decoding
+	Transmission Medium (wired /wireless)
+	Transmitter (that sends data)
+	Reciver(as name)
+
+->Packet Transmission(data as sets or packets/frames)
+	data in small units
+	Header Addidion(MetaData.src.destination,seq)
+	Routing(Selecting path)
+	Transmission(as Aboves)
+	Reception(reciving data)
+	Reassembly(packets to auctual data)
+
+
+->Inter Networking(networking within Orginazition)
+
+
+->Network Application(calsification of Network by design)
+->OSI/TCP-IP Models
+
+Classification of Network by(imp):
+		Size(Lan,wan,man,san,wlan)
+		Connectivity,(point to point network,BroadCast Network,Switched Networks)
+		Communication Medium(wire,wireless)
+		Mobility(Fixed Network(home wifi),Mobile Network(3g,4g,5g))
+		Design(Client Side network(client->server, server->client),peer to peer (Direct Client to CLient or server to server))
+
+
+
+///////////////////////////////////////////////////////////
+
+2--->Slide
+
+Growth of internet(i skipped)
+	Linear Scale
+	Log Scale
+
+/////////////////////////////////////////////////////
+3-->slide
+
+Types of Multuplexing(trasnfer multiple through single mediam)
+	FDM (freq division multiplexing(changing freq))
+	WDM (wave // // (changing wave))
+	TDM (time // //(Providing Time Period))
+
+Media(a mean(thing) through data can travel)
+
+Transmission media 
+	copper glass air etc
+
+Types of Media
+	Guided 
+		eg:copper optical coxial(tv cable wire)
+	Un Guided
+		eg:radio wave
+
+
+Sync & Async Communication(same as programming concept)
+
+Buad rate(speed at which data is transmitted through mediam) and farming error(occurs when reciver cant identify starting and ending of a packet or frame)
+
+rs232(a standard used for communication espically in peer 2 peer)
+
+Modulation(macking cahnge for encruption/decription(a Modem Device is a Moduler and DeModuler))
+	Amplitude M
+	Frequency M
+	Phase M
+
+Multiplexing(transfer 2 || more signal at a time single transmission medial by multiplexing || Modulation)
+
+
+/////////////////////////////////////////////////////////
+
+4-->slide
+
+Packets(parts of data)
+Why Packets(higher transfer rate,security)
+Frames
+Byte Stuffing(Editing Bytes to identify Proper data transmission)
+
+
+//////////////////////////////////////
+
+
+5-->Slide
+(error handling)
+	Parity Checking
+	   Parity bit(added to byte for even and odd  )	
+		Even parity(ensure that a byte has even bits of '1' )
+		Odd Prity (ensures that a byte has odd bits of '1' )			Can only detect 1 bit error
+	
+	CheckSum
+		Treat bits as integers add them (like 10101101=10101101+(5 in binary) and send to as data  )			
+
+	Cyclic Redundancy Check(CRC)(chatGPT)
+
+6-->slide
+
+16 bit CRC
+types of error CRC could check
+	Vertical error(Hardware failure damage 2nd b]it)
+	Brust errors (cahnage in bit by lightning , electric motor start etc)
+
+direct point to point Comunication
+	Advantages
+	Disadvantages
+		Star topology(diadvantage tons of wires not itentifyable)
+
+///////////////////////////////////////////////////
+
+7-->Slide
+
+Specifing destination in LAN(packets also have info of destination)
+Hardware Adressing(packets have info in form of hardware addressing MAC Address)
+
+LAN InterFace Checks these information and transmit data only to specified device also checks errore
+
+
+Lan(Local area network)(chatGPT)
+
+Lan Topologies(Star,Ring,Bus)
+	eg of Bus
+		Eithernet
+			CSMA(Carieer Sense Multipe Access (Protocal used to avoid Collision b/w multiple Devices(Multiple users use eathernet at same time)))
+
+
+///////////////////////////////////////////
+
+
+9-->slide
+
+
+Formate of hardware addressing 
+	Numaric value
+	Size selected for spefic network technelogy
+	Lenght 1-6 bytes
+	must be unique on lan
+Problems with Brodcasting(sending data to each device connected)
+	Use Computional Resources for both to use a frame or not
+		Solution(Multicasting:Dosent send data directly to CPU , Interface Hardware deal wait data first(Checking address))
+
+
+
+
+
+///////////////////////////////////////////
+
+
+10-->slide
+
+Multicasting(in it data is inly being sent to a group of specified hardware addresses istead of sending to all devices conected to a network)
+Header and Frame Formats(
+Frame Header= address and identifying information
+information typically in fields with fixed size and location
+Data Area my vary in size)
+
+eg Data = preamble|dest Address|Source Address|Frame Type|Data|CRC|
+		
+		premable for syncronization of packets
+
+
+
+
+IEEE 802.2 LLC(chatGPT)
+
+
+////////////////////////////////////////////
+
+11-->Slide
+
+
+
+
+w10-L16-internetworking--pptx
+
+Route packets(tracert)
+	Static Routing
+		Routing table Forwarding table
+	Dynamic Routing or adaptive Routing
+
+Internet-scale Rounting protocol(_- idk)
+Classification of routing Protocols
+	IGPs
+	EGPs
+
+Distance Vector Routing
+Networks Graph Representaion
+Link State Routing Protocol
+	LSP(Link State Packet)
+DijKstra's Algorithum(-_-)
+
+
+w10-OT-->pptx;
+how ISP works
+	Core/Distribution/Access
+Typical ISP networt topology
+	provides== www/proxy/DNS/aaa/Mail Server
+
+Access Network
+	Modem for every kind of access
+Distribution Network 
+	
+ISP server
+	Proxy Server
+	Mail Server
+	aaa Server
+	DNS
+	Web
+Core Network
+
+W11-L17-internetWorking-->pptx;
+
+ Inter As Routing
+
+Challenges of interDomain Routinng
+MultiBackBone internet
+EGP
+BGP Update Formate
+Integrating IGP and EGPs
+MLPS
+	Advantages of MLSP
+	MLSP Encapsulation
+	MLSP Header
+Tunneling
+Explecit Routing

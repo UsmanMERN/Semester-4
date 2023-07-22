@@ -1,0 +1,29 @@
+In programming, data types can be classified into two main categories: primitive and non-primitive (also known as composite or reference types). Here's a breakdown of each type:
+
+Primitive Types:
+Primitive types are the simplest data types in a programming language. They are built into the language itself and are used to represent basic values such as integers, floating-point numbers, characters, and booleans. Primitive types are usually stored directly in memory, which makes them faster and more efficient to work with than non-primitive types.
+
+Here are some key points to understand about primitive types:
+
+Data size: Primitive types have a fixed size and are usually represented by a specific number of bits or bytes.
+
+Value range: The value range of a primitive type is limited by its size. For example, an 8-bit integer can only represent values from -128 to 127.
+
+Immutable: Primitive types are immutable, meaning their values cannot be changed once they have been assigned.
+
+Pass-by-value: When a primitive value is passed to a function, a copy of that value is created and passed to the function. This means that any changes made to the value within the function do not affect the original value outside the function.
+
+Non-Primitive Types:
+Non-primitive types are more complex data types that are composed of one or more primitive types and/or other non-primitive types. They are also known as composite or reference types because they are typically stored as references to memory locations rather than directly in memory like primitive types. Non-primitive types include arrays, strings, classes, and objects.
+
+Here are some key points to understand about non-primitive types:
+
+Data size: Non-primitive types can vary in size depending on the amount of data they contain.
+
+Mutable: Non-primitive types are mutable, meaning their values can be changed even after they have been assigned.
+
+Pass-by-reference: When a non-primitive value is passed to a function, a reference to its memory location is passed instead of a copy of the value. This means that any changes made to the value within the function affect the original value outside the function.
+
+Object-oriented: Non-primitive types are often used in object-oriented programming because they allow for more complex data structures and behaviors to be created.
+
+Overall, understanding the differences between primitive and non-primitive types is important in programming because it can impact how code is written and how efficiently it runs. Primitive types are generally faster and easier to work with than non-primitive types, but non-primitive types offer greater flexibility and can be used to create more complex data structures and behaviors.

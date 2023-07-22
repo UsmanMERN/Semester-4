@@ -1,0 +1,101 @@
+topic 1
+Core network requirements
+Connectivity
+Cost-effective resource sharing
+Support for common services
+Network architecture
+Layering/ Encapsulation
+OSI architecture
+Internet architecture
+
+1=> Connectivity
+    Direct link networks
+    Links/ Nodes/ Clouds
+    Circuit switched networks
+    Packet Switching
+    Internetworking
+2=> Cost effective resource sharing
+    Multiplexing
+    Statistical multiplexing
+3=> Support from common services
+    Logical channels
+    Request/ Reply channels
+    Message Stream Channels
+    Reliability
+
+Internet Architecture
+Domain Name Service (DNS)
+DNS Client/Server Exchange
+ARP Client/Server Exchange
+Encapsulation
+HTTP Client/Server Exchange
+
+3=> Part 1: Addressing; Routing;
+Part 2: Network’s Performance Analysis
+    Bandwidth (throughput)*
+    Latency (delay)
+    Caravan (analogy)
+    Delay x Bandwidth product
+
+    Layered Communication
+
+4=> Network (Socket) Programming
+
+IP, TCP and UDP characteristics
+Berkeley Socket Interface
+Common System Calls
+Python example code
+
+5=> Direct Link Network
+Link-layer Basics
+Ethernet LAN technology
+
+    Encoding
+    Framing
+    Error detection
+    Reliable delivery
+    Access Mediation
+
+Shared access networks:
+
+5=> Direct-link networks
+Direct-link Shared-access Networks
+2.2 2.3 2.4 2.5 2.8
+what is topology?
+
+Wireless direct-link Networks
+
+    Wireless Local Area Network
+    Wireless Metro Area Network
+    Wireless Personal Area Network
+    Cellular Wireless
+
+6=> packet Switching
+chapter 3
+
+7=> 
+    4.1.1 to 4.1.4
+    4.3.1 to 4.3.2
+
+8=> 
+    4.2
+
+9=> OT: How do ISPs work?
+
+1=> 
+    CRC Hardware  Components
+
+    Frame Format and CRC
+
+    LAN technology and Network topology (Chapter 8)
+
+    Direct Point-to-Point Communication
+2=> 
+    Byte Stuffing
+    Transmission Errors
+    Error Detection
+    Parity Check
+    Checksum
+    CRC
+3=> 
+

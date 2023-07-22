@@ -1,0 +1,296 @@
+2521340
+
+Slide 26
+
+Clustered systems refer to a configuration where multiple individual computer systems work together as a unified system. These systems collaborate to provide enhanced performance, high availability, and fault tolerance. Here is an explanation of clustered systems:
+
+Multiple Systems Working Together: In clustered systems, multiple individual computer systems, often referred to as nodes, are interconnected. These nodes work together to achieve a common goal, such as processing tasks or providing services.
+
+Shared Storage: Clustered systems typically share storage resources through a storage-area network (SAN). This allows all nodes in the cluster to access the same data and maintain consistency across the system.
+
+High Availability: Clustered systems provide high-availability services, which means they can continue operating even if some components or nodes fail. If one node fails, another node takes over its responsibilities to ensure uninterrupted service.
+
+Asymmetric and Symmetric Clustering: In asymmetric clustering, one machine remains in a hot-standby mode, ready to take over in case of a failure. Symmetric clustering, on the other hand, involves multiple nodes running applications and monitoring each other. If one node fails, another node can continue the operation without interruption.
+
+High-Performance Computing (HPC) Clusters: Some clusters are specifically designed for high-performance computing. These clusters are used for computationally intensive tasks that require parallel processing. Applications running on HPC clusters need to be written in a way that takes advantage of parallelization to achieve optimal performance.
+
+Distributed Lock Manager (DLM): In clustered systems, multiple nodes may access shared resources concurrently. To prevent conflicts and ensure data consistency, a distributed lock manager (DLM) is often employed. The DLM coordinates access to shared resources and manages locks to avoid conflicting operations.
+
+Examples of clustered systems include:
+
+Web server clusters: Multiple servers working together to handle high traffic and provide scalable web services.
+Database clusters: Several database servers collaborating to process database queries and ensure data availability and reliability.
+High-performance computing clusters: Systems used in scientific research or simulations that require extensive computational power and parallel processing.
+
+Slide 27
+
++----------------------------------------------+
+|                 Shared Storage                |
++----------------------------------------------+
+|                                              |
+|                                              |
+|                                              |
++----------------------------------------------+
+|                  Cluster Nodes                |
+|                                              |
+|    +-------+     +-------+     +-------+     |
+|    | Node1 |     | Node2 | ... | NodeN |     |
+|    +-------+     +-------+     +-------+     |
+|                                              |
++----------------------------------------------+
+
+Slide 28
+
+Operating System Structure refers to the organization and design principles employed in the construction of an operating system. It defines how various components and modules of the operating system interact and work together to provide essential functions and services to users and applications. The structure of an operating system can vary depending on its design goals and intended usage. Here are some key aspects of operating system structure:
+
+Multiprogramming (Batch System):
+
+In a multiprogramming environment, the operating system allows multiple jobs (programs) to be loaded into memory simultaneously.
+This improves CPU utilization as the CPU can switch between different jobs when one job is waiting for I/O operations or other events.
+The operating system organizes the jobs in memory and schedules their execution.
+Examples: Early batch processing systems like IBM OS/360, Unix shell scripting.
+Timesharing (Multitasking):
+
+Timesharing extends multiprogramming by allowing multiple users to interact with the computer simultaneously.
+The CPU rapidly switches between different user processes, giving each user the illusion of having dedicated access to the system.
+Response time is crucial in timesharing systems to ensure interactive computing.
+Examples: Modern operating systems like Windows, macOS, and Linux.
+Process Management:
+
+Each program or task running on the system is represented as a process.
+The operating system manages processes by allocating resources, scheduling their execution, and facilitating communication and synchronization between them.
+CPU scheduling algorithms determine the order in which processes are executed.
+Examples: Process control blocks (PCBs) store information about each process, and context switching is performed to switch between processes.
+Memory Management:
+
+Memory management is responsible for allocating and managing the computer's primary memory (RAM) efficiently.
+It includes techniques like swapping and virtual memory to allow processes to execute even if they don't fit entirely in memory.
+Swapping moves processes between main memory and secondary storage when needed.
+Virtual memory allows the execution of processes that are larger than the available physical memory.
+Examples: Paging, segmentation, demand paging.
+These are just some of the aspects of operating system structure. Modern operating systems are complex and include many additional components, such as file systems, device drivers, networking modules, and security mechanisms, all working together to provide a comprehensive and efficient computing environment.
+
+SLide 29 
+
+SLide 30
+
+In an operating system, various operations are performed to ensure efficient and controlled execution of processes. These operations include interrupt handling and handling of software exceptions or traps. Let's discuss them in more detail:
+
+Interrupt Driven:
+
+Hardware Interrupt: A hardware interrupt is generated by a device to signal the CPU that it requires attention or has completed an operation. For example, when a keyboard key is pressed, the keyboard controller generates a hardware interrupt to notify the CPU.
+Software Interrupt: A software interrupt, also known as an exception or trap, is a request for the operating system's service or an indication of a software error. It can be triggered by a user program when it needs to perform privileged operations or when an error condition occurs, such as a division by zero.
+Process Problems:
+
+Infinite Loop: Sometimes, a program may enter an infinite loop, where it keeps executing the same set of instructions repeatedly without termination. This can lead to the entire system becoming unresponsive, and the operating system needs to intervene to handle such situations.
+Processes Modifying Each Other or the Operating System: Processes are isolated entities, but there can be cases where a process tries to modify another process's memory space or interfere with the operating system's critical data structures. The operating system needs to detect and prevent such unauthorized access to ensure system stability and security.
+To handle interrupts and software exceptions, the operating system employs interrupt handlers and exception handlers. These handlers are responsible for handling the specific interrupt or exception, performing the necessary actions (such as servicing a device request or resolving an error), and returning control to the interrupted program.
+
+For example, if a disk I/O operation completes, the disk controller generates a hardware interrupt. The operating system's interrupt handler for disk I/O will be invoked, and it will perform the necessary tasks to transfer the data from the disk to the appropriate memory location.
+
+Similarly, if a user program attempts to divide a number by zero, a software interrupt (exception) is raised. The operating system's exception handler for division by zero will handle the exception, notify the user program of the error, and take appropriate actions to prevent the system from crashing.
+
+By handling interrupts and exceptions, the operating system ensures proper control over the execution of processes, provides services requested by user programs, and maintains the stability and security of the system.
+
+SLide 31
+
+In an operating system, dual-mode operation refers to the ability to switch between two distinct modes of operation: user mode and kernel mode. This feature allows the operating system to protect itself and other critical system components from unauthorized or erroneous access by user programs.
+
+User mode is the mode in which applications and user processes run. In this mode, certain restrictions are enforced to prevent direct access to system resources or the execution of privileged instructions. User mode provides a controlled and isolated environment for user programs to execute.
+
+Kernel mode, also known as supervisor mode or privileged mode, is a higher privilege mode that allows the operating system kernel to have full access to system resources and perform privileged operations. In this mode, the operating system can execute instructions that are designated as privileged, such as accessing hardware devices or modifying system settings.
+
+The mode bit, provided by the hardware, is a flag that indicates whether the processor is currently operating in user mode or kernel mode. This bit allows the hardware to distinguish between user code and kernel code and enforce the appropriate restrictions and permissions.
+
+System calls are a mechanism through which user programs can request services from the operating system. When a user program needs to perform an operation that requires kernel privileges, such as reading from or writing to a file, it makes a system call. This switches the processor from user mode to kernel mode, allowing the operating system to execute the requested operation on behalf of the user program. Once the operation is completed, the processor returns to user mode.
+
+Multi-mode operations have become increasingly prevalent in modern CPUs. For example, virtualization technologies often employ a virtual machine manager (VMM) mode, which allows the hypervisor to run multiple guest virtual machines (VMs) with their own operating systems. Each guest VM operates in its own isolated mode, similar to user mode and kernel mode, providing secure and efficient virtualization of resources.
+
+Overall, dual-mode operation and multi-mode operations provide a crucial mechanism for protecting the integrity and security of the operating system while allowing user programs to run and access system resources in a controlled manner.
+
+Slide 32
+
+To prevent a user program from running indefinitely or hogging system resources, the operating system utilizes a timer and a mode transition from user mode to kernel mode. Here's how it works:
+
+Timer Setup:
+
+The operating system sets up a timer, which is typically implemented as a hardware device.
+The timer is programmed to generate an interrupt after a specific time period or at regular intervals.
+Timer Interrupt:
+
+As the user program runs in user mode, the timer continues to decrement its counter.
+When the counter reaches zero, the timer generates an interrupt, causing a switch from user mode to kernel mode.
+Interrupt Handling:
+
+Upon receiving the timer interrupt, the CPU transfers control to the interrupt handler routine in the operating system.
+The interrupt handler performs necessary tasks, such as updating system statistics, checking for process time limits, and rescheduling processes.
+Process Control:
+
+The operating system can take different actions based on the timer interrupt:
+If the user program has exceeded its allotted time slice or violates any other policy, the operating system can terminate or preempt the program.
+If the user program is within its time limits, the operating system may simply reschedule it to allow other processes to run.
+By using a timer and timer interrupts, the operating system enforces fairness, prevents processes from monopolizing system resources, and ensures that no single program can run indefinitely.
+
+For example, in a multitasking operating system, if a user program enters an infinite loop, consuming excessive CPU time, the timer interrupt will eventually occur. The interrupt handler will detect the timeout, and the operating system can interrupt the program's execution, terminate it, or schedule another process to run, maintaining system responsiveness and fairness.
+
+The timer mechanism is an essential component of preemptive scheduling, which allows the operating system to switch between multiple processes and allocate CPU time fairly among them.
+
+Slide 33
+
+Process management is a crucial aspect of an operating system that involves the creation, execution, and termination of processes. Here's a breakdown of the key points:
+
+Process Definition:
+
+A process is an instance of a program in execution. It represents a running program and its associated resources.
+Processes require various resources to accomplish their tasks, such as CPU time, memory, I/O devices, and files.
+Each process has its own initialization data, including variables, stack, and program counter.
+Process Execution:
+
+A single-threaded process consists of a single program counter that keeps track of the next instruction to be executed.
+Instructions are executed sequentially, one after another, until the process completes its task.
+In contrast, a multi-threaded process has multiple program counters, with each thread executing its instructions independently.
+Resource Management:
+
+Processes require system resources to execute, and the operating system is responsible for allocating and managing these resources.
+When a process terminates, the operating system reclaims any reusable resources associated with it, ensuring efficient resource utilization.
+Concurrent Execution:
+
+Modern operating systems support the execution of multiple processes or threads concurrently on one or more CPUs.
+This concurrency is achieved by multiplexing the CPUs among different processes or threads, allowing them to run simultaneously.
+For example, consider a computer running an operating system with multiple user applications open, such as a web browser, a word processor, and a media player. Each application is a separate process with its own resources and program execution flow. The operating system manages the execution of these processes concurrently, allocating CPU time, memory, and I/O resources as needed.
+
+Process management involves tasks such as process creation, scheduling, synchronization, and termination. It ensures the efficient and controlled execution of multiple processes, enabling the operating system to effectively utilize system resources and provide a responsive and multitasking environment for users and applications.
+
+Slide 34
+
+Process management encompasses various activities to create, manage, and control processes within an operating system. Here are explanations for each of the mentioned activities:
+
+Creating and deleting processes:
+
+The operating system is responsible for creating new processes in response to user requests or system events. This involves allocating necessary resources and setting up the process control block (PCB) to store information about the process.
+Similarly, the operating system can terminate or delete processes that have completed their execution or are no longer needed. This involves releasing allocated resources and removing the corresponding PCB.
+Suspending and resuming processes:
+
+Processes may need to be temporarily suspended or paused to allow other processes to execute. This can be done to prioritize critical processes, handle resource conflicts, or facilitate multitasking.
+Once a suspended process becomes eligible for execution again, it is resumed and allowed to continue from where it left off.
+Process synchronization:
+
+Processes often need to coordinate their activities, share resources, and avoid conflicts. Process synchronization mechanisms, such as locks, semaphores, and condition variables, are provided by the operating system to ensure orderly execution and prevent data inconsistencies or race conditions.
+Process communication:
+
+Processes may need to exchange data or communicate with each other to achieve a common goal or coordinate their activities. The operating system provides various inter-process communication (IPC) mechanisms, such as shared memory, message passing, and pipes, to facilitate communication between processes.
+Deadlock handling:
+
+Deadlock is a situation where two or more processes are unable to proceed because each is waiting for a resource held by another process. The operating system employs strategies to detect, prevent, and resolve deadlocks, such as resource allocation algorithms, deadlock detection algorithms, and deadlock recovery techniques.
+Examples:
+
+When a user opens a web browser, the operating system creates a new process for the browser application, allocates resources such as memory and CPU time, and initializes its PCB.
+In a multitasking environment, the operating system may suspend a background process temporarily to allocate more resources to a foreground process, ensuring a smooth user experience.
+Processes can use synchronization mechanisms like semaphores to coordinate access to a shared printer, allowing only one process to print at a time.
+Processes can communicate with each other using message passing mechanisms, such as pipes, to exchange data or coordinate tasks.
+The operating system may employ deadlock avoidance algorithms to prevent resources from being allocated in a way that could lead to a deadlock situation.
+These process management activities are vital for maintaining the stability, efficiency, and responsiveness of an operating system, enabling the execution of multiple processes in a controlled and coordinated manner.
+
+Slide 35
+
+Memory management is a crucial aspect of an operating system that handles the allocation, tracking, and deallocation of memory resources. Here's a breakdown of the mentioned activities:
+
+Keeping track of memory usage:
+
+The operating system maintains a record of which parts of memory are currently allocated and being used by processes. It tracks the ownership and status of memory blocks to avoid conflicts and ensure efficient utilization.
+Memory allocation and deallocation:
+
+When a process needs memory to store its program instructions and data, the operating system allocates a suitable memory space for it. This involves finding a contiguous block of free memory and assigning it to the requesting process.
+Conversely, when a process completes its execution or is terminated, the operating system deallocates the memory occupied by that process, making it available for other processes.
+Memory relocation and swapping:
+
+As the number of active processes exceeds the available physical memory, the operating system may need to transfer some processes or parts of them from main memory to secondary storage (e.g., hard disk). This process is known as memory swapping or paging.
+The operating system decides which processes or pages should be swapped out of memory based on certain criteria, such as priority, usage patterns, or least recently used (LRU) algorithm.
+When a swapped-out process or page is required again, it is brought back into memory, and another process or page may be swapped out to accommodate it.
+Examples:
+
+When a user launches a word processing application, the operating system allocates a portion of memory to hold the executable instructions and data of the application.
+If the available memory becomes scarce due to the simultaneous execution of multiple programs, the operating system may choose to swap out less frequently used processes to the disk and bring in more critical or actively used processes into the main memory.
+When a web browser loads a webpage, the browser process requests memory from the operating system to store the webpage content, images, and other data.
+In virtual memory systems, the operating system dynamically maps virtual memory addresses used by processes to physical memory locations, allowing processes to access memory beyond the physical capacity of the system.
+Effective memory management ensures efficient utilization of memory resources, prevents conflicts, and enables smooth execution of processes, ultimately optimizing CPU utilization and enhancing the overall system performance.
+
+
+Slide 36
+
+Storage management in an operating system involves providing a logical and organized view of information storage, abstracting the physical properties of storage devices, and managing files and directories. Here's an explanation of the mentioned aspects:
+
+Logical storage unit - File:
+
+The operating system presents a uniform and logical view of storage to users and applications through files. A file is a named collection of related information that is stored on a storage medium, such as a hard disk or tape.
+Files provide a convenient way to organize and manage data, allowing users to access, modify, and store information in a structured manner.
+Device control and properties:
+
+Each storage medium, such as a disk drive or tape drive, is controlled by a specific device driver that interacts with the operating system.
+Different storage devices have varying properties, including access speed, capacity (storage size), data-transfer rate, and access method (sequential or random). The operating system manages these properties and provides appropriate interfaces for accessing and utilizing the storage devices.
+File-System management:
+
+Files are typically organized into directories or folders, forming a hierarchical structure that facilitates organization and navigation.
+The operating system performs various file-system management activities, including creating and deleting files and directories, providing primitives (basic operations) to manipulate files and directories (e.g., read, write, rename, move), mapping files onto secondary storage devices, and ensuring backup and recovery of files onto stable and non-volatile storage media.
+Examples:
+
+When a user creates a new document on a computer, the operating system creates a corresponding file in a specific directory, assigns a unique name to it, and provides the necessary file management operations like opening, saving, and deleting the file.
+A file system may organize files into directories based on categories, such as separating documents, images, and music into different folders for easy organization and retrieval.
+The operating system manages the storage space allocation for files, ensuring that data is stored efficiently on the storage medium and providing features like file compression or encryption.
+A backup utility provided by the operating system may periodically copy files from the hard disk to an external storage device (e.g., a USB drive) to safeguard against data loss in case of hardware failures or system crashes.
+Storage management plays a vital role in providing a reliable and organized storage environment, allowing users and applications to store and access data effectively while ensuring data integrity and security.
+
+Slide 37
+
+Mass-storage management in an operating system involves effectively managing the storage of data on disks, which are typically used for storing large amounts of data that cannot fit in main memory or that needs to be kept for a long time. Here's a breakdown of the key points:
+
+Importance of proper management:
+
+Efficient management of mass storage is crucial because the overall speed and performance of the computer system heavily rely on the disk subsystem and its associated algorithms.
+Poor management can result in slow data access, inefficient disk space utilization, and degraded system performance.
+OS activities:
+
+Free-space management: The operating system is responsible for keeping track of the available free space on disks. It manages the allocation and deallocation of disk space, ensuring that files can be stored efficiently and that free space is properly utilized.
+Storage allocation: When a new file is created or an existing file is modified, the operating system determines where to allocate the required disk space to store the file's data. It manages the organization and tracking of the allocated storage space.
+Disk scheduling: The operating system employs disk scheduling algorithms to determine the order in which disk I/O requests are serviced. These algorithms optimize disk access by minimizing seek time and maximizing disk throughput. Examples of disk scheduling algorithms include First-Come, First-Served (FCFS), Shortest Seek Time First (SSTF), and SCAN.
+Tertiary storage:
+
+Tertiary storage refers to storage devices that are slower and less frequently accessed than disks. This includes technologies such as optical storage (e.g., CDs, DVDs) and magnetic tape.
+Tertiary storage is often used for long-term archival or backup purposes, where data needs to be stored for extended periods but may not require fast access.
+Depending on the specific technology, tertiary storage can be categorized as WORM (write-once, read-many-times), meaning data can only be written once and read multiple times, or RW (read-write), allowing data to be both written and read.
+Examples:
+
+When a user saves a large file on a computer, the operating system manages the free space on the disk, determines where to store the file, and updates the file system's data structures accordingly.
+Disk scheduling algorithms, such as SSTF or SCAN, prioritize the order in which disk read/write requests are serviced. This helps to reduce seek time and optimize the disk's overall performance.
+In a backup application, the operating system manages the writing of data to an optical storage device (e.g., a DVD writer) or a magnetic tape drive. The data is written once and can be read multiple times for recovery or archival purposes.
+Proper management of mass storage resources by the operating system is essential for efficient data storage, retrieval, and system performance. It involves handling free-space management, storage allocation, and disk scheduling, while also considering the characteristics and requirements of tertiary storage devices.
+
+Slide 39
+
+In a multitasking environment, where multiple processes are running concurrently, it is important to ensure that the most recent value of data is used, regardless of its location in the storage hierarchy. This is necessary because different processes may be accessing and modifying the same data simultaneously. The operating system must handle data migration and synchronization to maintain data consistency.
+
+In a multiprocessor environment, where multiple CPUs (Central Processing Units) are present, each CPU may have its own cache memory. To ensure cache coherency, the hardware and operating system work together to guarantee that all CPUs have the most up-to-date value of a particular data item in their caches. This is achieved through cache coherence protocols that allow CPUs to share and update data across their caches when modifications occur.
+
+In a distributed environment, where multiple interconnected systems or nodes work together, the complexity of data migration and consistency increases. Several copies of the same data can exist in different nodes, and ensuring data consistency becomes a significant challenge. Various solutions are available to address this issue, such as distributed file systems, distributed databases, and distributed synchronization protocols. These solutions aim to coordinate data access and updates across multiple nodes to maintain data consistency and avoid conflicts.
+
+Example: Consider a distributed database system used by a multinational company. The company has multiple offices located in different countries, each with its own database server. The database contains employee information, including salary data. When an employee's salary is updated in one office, the distributed database system must ensure that all other offices have the most recent value of the salary. This requires data migration and synchronization mechanisms to propagate the update across all database servers and maintain consistency across the distributed environment.
+
+Overall, ensuring data consistency and synchronization in multitasking, multiprocessor, and distributed environments is a complex task that involves strategies and protocols to manage data migration, cache coherency, and coordination among multiple systems or processes.
+
+Slide 40
+
+The I/O (Input/Output) subsystem is an integral part of an operating system that manages the interaction between the computer and its connected hardware devices. Its primary purpose is to hide the complexities and peculiarities of different hardware devices from the user, providing a uniform and consistent interface for performing I/O operations.
+
+The I/O subsystem performs several key functions:
+
+Memory Management: It handles the management of I/O data in memory, including buffering, caching, and spooling. Buffering involves temporarily storing data in a buffer while it is being transferred between the device and memory, helping to smooth out any discrepancies in data transfer rates. Caching involves storing frequently accessed data in faster storage (such as cache memory) to improve performance. Spooling refers to the overlapping of output from one job with the input of other jobs, allowing for efficient processing of I/O operations.
+
+General Device-Driver Interface: The I/O subsystem provides a general device-driver interface that allows the operating system to communicate with various hardware devices. It defines a standard set of functions and protocols that device drivers must adhere to, enabling the operating system to interact with different devices using a consistent method.
+
+Device Drivers: Device drivers are software components that interface with specific hardware devices. They are responsible for translating generic I/O requests from the operating system into device-specific commands that the hardware can understand. Device drivers provide an abstraction layer, allowing the operating system to work with a wide range of hardware devices without needing to understand their specific details.
+
+By abstracting the details of hardware devices and providing a standardized interface, the I/O subsystem allows the operating system and applications to perform I/O operations in a consistent and efficient manner. It simplifies the development of software and ensures compatibility across different hardware configurations.
+
+Example: Suppose you want to print a document from your computer. When you initiate the print command, the I/O subsystem comes into action. It manages the data transfer between the computer's memory and the printer. It may use buffering to temporarily store the data, caching to improve performance, and spooling to overlap the printing process with other tasks. The I/O subsystem communicates with the printer's device driver, which converts the print command into a series of instructions specific to that printer model. The I/O subsystem ensures that the data is correctly sent to the printer, manages any errors or interruptions that may occur during the process, and notifies the operating system and application when the printing is completed or if any issues arise.
+
+Overall, the I/O subsystem plays a crucial role in managing the interaction between the computer and its connected hardware devices, providing a layer of abstraction, and ensuring efficient and reliable I/O operations.

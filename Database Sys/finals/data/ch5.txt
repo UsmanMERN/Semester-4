@@ -1,0 +1,105 @@
+advantages of Relational Database Model:
+
+	Data Integrity
+	Data Independincy
+	Structural Independency
+	Data consistency & accuracy
+	Data Retrival & Share
+
+
+Keys:
+
+	Super Key
+	Candidate Key
+	Primary Key
+	Alternate Key
+	Composite Key
+	Foreign Key
+
+
+Components of RDMS:
+
+	File Manager
+	Database Manager
+	Query Processor(sql)
+	Data Dictionary(Matadata)
+	Database Manipuletion Language(DML) precompiler
+	Data Defination Language(DDL)
+	
+	
+Types of Relations
+
+	Base Table(Main Table)
+	Query Result Tables
+	View(Spaefic Colums)
+
+Advantages of Views:
+
+	Security
+	Query Simplicity
+	Structural Simplicity(View as Prefered)
+	Insulation Form Change
+	
+
+Proporties of Relations(Tables)
+	All Elephants Use Tricky Insects Always,its amazing 
+
+	Atomic Values in Fields
+	Entries form Same Domain
+	Unique Tuples
+	Unique Attributes
+	Insignificant Attribute Sequence
+	Insignificant Tuple Sequence
+
+
+Codd's Rules:
+	
+	1}The Information Rule(Data as Tables)
+	2}The Guaranteed Access Rule(Data Must be accessible,table Name,Primary Key,Attribute Name)
+	3}Systematic Treatment of NULL Values(NULL must exits != ' ', zero ,, indipendent of dataType(Any DataType could have NULL(Supports)))
+	4}Active online Catalog based on the Relational Model(MetaData,Rules on Data,Constraints , Could Also be Accessed,mantained by DBMS)
+	5}Comprehasive Data Sub-Language Rules(Data D,View D,Data Manipulation Rules,Constraints,Transactins Managament Operations)
+	
+	6}View Updating Rules(View(as Logical Table) could also be updatable)
+	7}High Level Insert Update Delete(Multiple Tuple Manipulation)
+	8}Physical Data Independance Rule(Change in Physical Layer Dosnt effect Logical layer)
+	9}Logical Data Independance Rule(Change in Logical Layer Dosent Effect in External Layer)
+	10}Integrity Independace Rules(Constraints Implemented in (database)Backend not in Application)
+	11}Distribution Independance Rule(Distribution of DataBase on diff Loc Dosent effect Application)
+	12}Non-Subversion Rule(constraints Should be on DBMS so that Security Cant be bypassed )
+
+
+Relational Data Integrity:
+	
+	Entity Integrity(each row has primary key !=NULL (ti identify each row))
+	Domain Integrity(Spefic range of data entered in a column)
+	Referential Integrity(Preserves Relation b/w tables when records are added or edited or deleted)
+
+
+Database Languages:
+	2 types
+	DDL(DataDefination Language)
+	DML(DataManepulation Language)
+		Prociderual DML
+		Non Procedural DML
+
+
+Join(connect two or more tables to get data from one tuple of relation with other tuple of same or other relation:::(relations must have comman attribute)):
+
+	Theta Join(Selected Rows of first relation marged with all rows of second relation donated= R[X]S)
+	Equi Join(Tuples are joined on the basics of comman attribute (commanly used) same attributes appears twice in output :: FACULTY |X| Facality.FacID=COURCES.FID^COURSE)
+	
+	Natural Join(Same as Equi Join but return comman Attribute once in Some Systems may require same attribute name or a renaming mechanisum::FACULITY|X|FacID,FID^COURSE)
+
+	Outer Join()
+		left outer joined
+		right outer joined
+		full outer join
+	semi join 
+
+functional dependency 
+1NF
+full functional dependency
+2NF
+transitive dependency
+3NF

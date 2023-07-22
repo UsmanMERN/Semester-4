@@ -1,0 +1,336 @@
+Software requirements are the functional and non-functional specifications that describe what a software product 
+should do and how it should behave. They define the features, capabilities, and quality characteristics that a software 
+system must exhibit to meet the needs of its stakeholders.
+
+Software requirements can be divided into two main categories:
+
+Functional Requirements: These describe the function or task that the software must perform, such as data processing, 
+calculations, or reporting. For example, if you were developing an e-commerce website, one functional requirement 
+could be that the site allows users to add items to a shopping cart.
+
+Non-Functional Requirements: These describe the quality attributes that the software must possess, such as performance, 
+reliability, security, and usability. For example, if you were developing a banking application, one non-functional requirement
+‎‭could be that the application must maintain user data privacy and ensure secure transactions.
+
+Defining software requirements is a critical step in the software development lifecycle because it helps to ensure that the 
+end-product meets the expectations of the customer and stakeholders. By gathering and documenting these requirements, 
+developers can have a clear understanding of what they need to build and can develop a product that meets all necessary criteria.
+
+
+
+Our favorite definition, though, comes from Ian Sommerville and Pete Sawyer (1997):
+Requirements are a specification of what should be implemented. They are
+descriptions of how the system should behave, or of a system property or attribute.
+They may be a constraint on the development process of the system.
+
+
+
+The pure dictionary definition of "requirement" is:
+
+Something that is needed or demanded; a necessary condition, obligation, or feature.
+
+This definition refers to the fact that a requirement is something that is essential or mandatory for a particular purpose or goal.
+It can be seen as a necessary condition or obligation that must be met in order to achieve a desired outcome.
+
+For example, if you are applying for a job, there may be certain requirements that you need to fulfill in order to be considered for the position.
+These could include educational qualifications, work experience, or specific skills and abilities. Similarly, when designing a new product or system,
+there may be certain requirements that must be met in order for it to function properly and meet the needs of its users.
+
+Overall, the pure dictionary definition of "requirement" emphasizes the idea that a requirement is something that is essential, necessary, or mandatory
+for achieving a particular goal or objective.
+
+
+Levels and types of requirements
+
+
+Sure, let me provide some real-life examples to help illustrate each of these terms:
+
+Business requirement: A high-level business objective that drives the development of a product.
+For example, a business requirement for a new car model might be to increase fuel efficiency and reduce emissions in order 
+to appeal to environmentally conscious customers.
+
+Business rule: A policy, guideline, standard, or regulation that defines or constrains some aspect of a business. 
+For example, a business rule for an insurance company might dictate that certain types of claims must be settled within a specified time period.
+
+Constraint: A restriction on the choices available to developers for designing and constructing a product. 
+For example, a constraint for a building construction project might be a limited budget, which imposes restrictions on the types of
+materials, labor, and design choices that can be made.
+
+External interface requirement: A description of how a software system will connect and interact with users, other systems, or hardware devices. 
+For example, an external interface requirement for a social media app might specify how users will log in, how they will share content, 
+and how the app will integrate with other social media platforms.
+
+Feature: One or more capabilities of a system that provide value to users and are described by a set of functional requirements.
+For example, a feature of a smartphone might be the ability to send and receive text messages, which requires specific functionality 
+and user interface design.
+
+Functional requirement: A description of a specific behavior that a software system must exhibit under certain conditions. 
+For example, a functional requirement for a banking app might be the ability to transfer funds between accounts, 
+which requires specific inputs, outputs, and error handling.
+
+Non-functional requirement: A description of a property or characteristic that a system must exhibit or a constraint that it must respect. 
+For example, a non-functional requirement for a website might be that it must load quickly, 
+which imposes constraints on the design and implementation of the website's architecture and content.
+
+Quality attribute: A type of non-functional requirement that describes a service or performance characteristic of a system. 
+For example, a quality attribute for a video conferencing app might be high audio and video quality, which requires specific technology 
+and infrastructure to deliver.
+
+System requirement: A top-level requirement for a product that contains multiple subsystems, 
+which could be all software or a combination of software and hardware. 
+For example, a system requirement for a smart home device might be the ability to communicate with other 
+devices in the home and integrate with a central control system.
+
+User requirement: A goal or task that specific classes of users must be able to perform with a system, or a desired product attribute. 
+For example, a user requirement for a fitness app might be the ability to track calories burned during exercise, which requires specific 
+functionality and user interface design.
+
+
+
+
+
+
+Sure! Software requirements are basically information about what a software product should do and how it should behave. 
+There are different types of requirements that need to be considered, such as why the system is being developed, 
+what users need to be able to do with the software, and how the software will work.
+
+Business requirements: Business requirements describe why the organization is implementing the system—the 
+business benefits the organization hopes to achieve. For example, let's say a hotel wants to increase its revenue by 20%. 
+This goal might lead to the idea of building an online booking system for rooms.
+
+User requirements: User requirements describe goals or tasks the users must be able to perform with the 
+product that will provide value to someone. The domain of user requirements also includes descriptions of product attributes or 
+characteristics that are important to user satisfaction. For example, a user requirement for a music streaming service could be 
+"Users should be able to create playlists of their favorite songs."
+
+Functional requirements: Functional requirements specify what the software must do to enable users to accomplish their 
+tasks (user requirements), thereby satisfying the business requirements. For example, a functional requirement for the online 
+booking system could be "The system should allow users to see available rooms and make reservations."
+
+Nonfunctional requirements: Nonfunctional requirements describe characteristics of the software that aren't directly related to its behavior, 
+like how fast it runs or how secure it is. Examples include performance, security, compatibility, and user interface design.
+
+A feature is a group of system capabilities that provide value to a user and are described by a set of functional requirements. 
+Basically, a feature is a specific thing that the software can do that is useful to the user, like a bookmark feature in a web browser
+ or a spelling checker. A customer's list of desired product features is not the same thing as a description of the user's needs, though. 
+A feature can actually encompass multiple user requirements, and each user requirement implies that certain functional requirements 
+must be implemented to allow the user to perform their task.
+A feature tree is a way to break down a feature into smaller features that relate to specific user requirements and functional requirements. 
+By breaking down a feature into smaller parts, it becomes easier to understand and develop the functional requirements needed to make it work.
+An example of a feature for a music streaming service could be "Automatic song recommendations based on user listening history."
+
+
+
+When we talk about software requirements, we usually divide them into two categories: functional and nonfunctional. 
+Functional requirements describe what the software should do, while nonfunctional requirements describe how well 
+the software should do it or what conditions it needs to operate in. Nonfunctional requirements can include things like 
+security, performance, compatibility, and regulatory requirements.
+
+Some people don't like the term "nonfunctional" because it doesn't really say what these requirements are, only what they're not. 
+However, we still use this term because there isn't really a better one. The important thing is to make sure that you consider 
+both functional and nonfunctional requirements when you're developing software, because both are important for making sure that 
+the software meets users' needs and expectations.
+
+
+
+
+Working with the three levels
+
+
+
+Sure, let me explain with an example.
+
+Suppose a company wants to develop a new mobile app that provides personalized meal planning for its users. 
+The company's marketing team defines the high-level business requirements that the app should be easy to use, 
+include a payment system, and provide personalized meal plans based on user preferences.
+
+The development team then works with a business analyst to identify the user requirements by conducting interviews and surveys with potential users. 
+They find out that users want to be able to select dietary restrictions, have access to a variety of recipes, and save their favorite meals to a list. 
+These user requirements are documented in a user requirements document.
+
+From the user requirements, the business analyst determines the functional requirements that will allow users to achieve their goals, 
+such as displaying recipe options, filtering by dietary restrictions, and allowing users to save their favorite meals. Non-functional requirements, 
+like performance and security, are also identified and documented.
+
+The development team then designs a solution that implements the necessary functionality 
+within the constraints imposed by the non-functional requirements. Testers determine how to verify whether the requirements were correctly implemented.
+
+Throughout the project, there may be changes to the original requirements. 
+For example, the marketing team might identify a need for a feature that wasn't originally included in the business requirements, 
+such as the ability to track calories. The project scope must be re-evaluated, and decisions made about whether to increase the project's or iteration's 
+scope to accommodate the new requirement.
+
+It's important to document all requirements information in a shareable form, such as a requirements specification document. 
+This helps ensure that everyone involved in the project has a clear understanding of 
+what needs to be delivered and reduces the risk of miscommunication between team members.
+
+
+
+
+Product vs. project requirements
+
+
+Product requirements are the properties and features of a software system that the development team needs to build. 
+These requirements describe what the software is supposed to do, how it should behave, and what it should look like.
+
+On the other hand, project requirements are the expectations and deliverables necessary to successfully complete the project as a whole. 
+These requirements are not related to the software system itself but are necessary for the project's success. 
+Examples of project requirements include physical resources needed by the development 
+team, staff training needs, user documentation, support documentation, infrastructure changes required in the operating environment, 
+procedures for releasing, installing, configuring, and testing the software, certification and compliance requirements, revised policies 
+and processes, sourcing, acquisition, and licensing of third-party software and hardware components, beta testing, manufacturing, packaging, 
+marketing, and distribution requirements, customer service-level agreements, and requirements for obtaining legal protection for intellectual 
+property related to the software.
+
+The Software Requirements Specification (SRS) documents the product requirements and does not include design or implementation 
+details, project plans, test plans, or similar information. Identifying these project requirements is a shared 
+responsibility of the business analyst and the project manager, and this information is best stored in the project management plan, 
+which should itemize all the expected project activities and deliverables.
+
+Overall, while both product and project requirements are important for successful software development, 
+this book focuses on product requirements, whether the ultimate deliverable is a commercial software product, 
+a hardware device with embedded software, a corporate information system, contracted government software, or anything else.
+
+
+
+
+Requirements development and management
+
+
+Requirements development and management is an important process in software engineering that involves 
+gathering, analyzing, specifying, and validating the requirements of a software product. 
+It helps ensure that the end-product meets the needs and expectations of the users and stakeholders.
+
+Let's take an example of a real-life scenario where requirements development and management played a significant role. 
+Consider the development of an e-commerce website like Amazon.
+
+Elicitation: The first step in requirements development is to elicit or gather information about the requirements from various sources. 
+In this case, we would need to identify the stakeholders who would be using the website, such as customers, sellers, and administrators. 
+We would need to understand their needs and expectations by conducting interviews, surveys, or focus groups. We would also need to study 
+existing e-commerce websites to identify best practices.
+
+Analysis: Once we have gathered information, we need to analyze it to identify the specific requirements for the website. 
+This could involve breaking down high-level requirements into smaller, more detailed components, 
+prioritizing features based on user needs and business objectives, and identifying any gaps or unnecessary requirements. 
+For example, we might analyze customer feedback to identify the most frequently requested features like search functionality, product reviews, and ratings.
+
+Specification: Next, we translate the identified requirements into clear and concise documentation that can be shared and understood by all stakeholders. 
+This could involve creating use cases, diagrams, and other visual representations of the system's functionality. 
+For example, we might create wireframes or mockups of the website's user interface to help stakeholders visualize the end-product.
+
+Validation: Finally, we confirm that the documented requirements are accurate, complete, and feasible before the development team starts building the website. 
+This could involve reviewing the requirements with stakeholders, conducting user acceptance testing, 
+and ensuring that the website meets the desired business objectives. For example, we might conduct usability testing on the website's design prototypes to 
+ensure that it's easy to use and meets user expectations.
+
+In summary, requirements development and management is an essential process that helps ensure that software products meet the needs of users and stakeholders. 
+By following a systematic approach like the one described above, we can identify and prioritize the most important features and functionalities for the product, 
+resulting in a more successful end-product.
+
+
+
+
+Every project has requirements
+
+
+Requirements are a critical part of any software project, and their importance cannot be overstated. 
+Without a clear understanding of what needs to be built and how it should function, 
+the resulting system is likely to fail or not meet the needs of its stakeholders.
+
+Let's take an example of a real-life scenario where requirements played a significant role. 
+Consider the development of a healthcare information system for a hospital.
+
+Understanding stakeholder needs: The first step in developing the healthcare information system would be to understand the needs of various stakeholders,
+such as doctors, nurses, administrative staff, and patients. This could involve conducting interviews, surveys, or focus groups to gather
+feedback on what features and functionalities are needed.
+
+Defining functional requirements: Based on stakeholder feedback, the team would then need to define functional requirements for the healthcare information system. 
+For example, they might identify the need for electronic medical records, patient scheduling, and billing capabilities.
+
+Incorporating non-functional requirements: In addition to functional requirements, the team would also need to consider non-functional requirements, 
+such as performance, security, and usability. For example, they might need to ensure that the system can handle a large number of concurrent users
+and that patient data is kept confidential and secure.
+
+Iterative approach: Given the complexity of the healthcare information system, it might be impossible to fully specify all the requirements upfront. 
+In this case, the team might take an iterative approach, implementing one portion of the requirements at a time and obtaining feedback from stakeholders 
+before moving on to the next cycle.
+
+Prioritizing requirements: With so many requirements, the team would need to prioritize which ones are most important and which can wait until later releases. 
+For example, they might decide to implement electronic medical records first, since this is critical for patient care, and delay billing capabilities 
+until a later release.
+
+In summary, requirements are essential to the success of any software project. By taking the time to understand stakeholder needs, define requirements, 
+and prioritize them appropriately, teams can ensure that they build a system that meets the needs of its users and stakeholders.
+
+
+
+
+When bad requirements happen to good people
+
+
+This text explains how requirements problems can cause significant rework in software development projects. 
+Rework can consume a large portion of the development cost, and requirements errors often account for the majority of this cost. 
+While some rework may add value to the project, excessive rework is wasteful and frustrating.
+
+It can cost significantly more to correct a requirement defect that is found late in the project compared to fixing it early on. 
+For example, if a requirement error is found during the design phase, it may cost $1 to fix the error and an additional $2 or $3 to 
+redo the design based on the incorrect requirement. However, if the error is not found until a user reports a problem after the 
+product has been released, it could cost $100 or more to correct the problem.
+
+By preventing requirements errors and catching them early, teams can significantly reduce the amount of rework required and improve project success.
+The text suggests managing risks associated with requirements practices to prevent them from derailing the project. 
+Some of the most common risks include insufficient user involvement, inaccurate planning, creeping user requirements, ambiguous requirements,
+gold plating, and overlooked stakeholders.
+
+Insufficient user involvement: This refers to a situation where the users or stakeholders who will be using or interacting with the software product 
+are not sufficiently involved in the requirements gathering and validation process. This can lead to requirements being missed or misunderstood,
+ resulting in delays and rework later on.
+
+Inaccurate planning: This refers to a situation where the project team underestimates the time, effort, or resources required to complete the project successfully. 
+This can result in unrealistic expectations, overruns, and delays, leading to additional costs and rework.
+
+Creeping user requirements: This refers to a situation where new or additional requirements are added to the project scope after 
+initial planning or development has started. This can happen due to changing business needs, new stakeholder requests, or evolving market dynamics.
+These changes can cause delays and impact the project schedule and budget.
+
+Ambiguous requirements: This refers to a situation where the requirements are unclear, vague, or open to interpretation. 
+This can lead to different understandings among stakeholders, resulting in confusion, delays, and rework.
+
+Gold plating: This refers to a situation where developers add unnecessary features or functionality to the product that were not requested by the customer or stakeholders. 
+This can result in wasted time, resources, and increased costs without adding any real value to the product.
+
+Overlooked stakeholders: This refers to a situation where relevant stakeholders are not identified or included in the requirements gathering and validation process. 
+This can result in missing requirements or features that are important to specific groups of users, leading to dissatisfaction and rework later on.
+
+Overall, the text emphasizes the importance of effective requirements management in delivering a high-quality product that meets the user's expectations 
+within the agreed-upon cost and schedule.
+
+
+
+
+
+Benefits from a high-quality requirements process
+
+
+This text explains the benefits of having a high-quality requirements process in software development projects. 
+It suggests that investing time and effort in good requirements practices will yield significant returns, 
+including fewer defects, reduced rework, faster delivery, lower costs, and increased stakeholder satisfaction.
+
+For example, involving customers and stakeholders throughout the project helps the development team better understand their 
+needs and reduce the expectation gap between what they want and what is delivered. This approach can result in a product that meets 
+the user's expectations and avoids unnecessary features that no one will use, leading to faster development and delivery, lower costs, and fewer miscommunications.
+
+Another benefit of a high-quality requirements process is that it facilitates a systems approach to product engineering by 
+allocating requirements to various subsystems. This approach helps minimize the adverse impact of requirements changes and makes testing easier, 
+leading to higher-quality products.
+
+Overall, the text emphasizes the importance of investing in sound requirements practices to deliver high-quality products that meet 
+stakeholder expectations and reduce costs and delays. The text suggests several steps to improve requirements practices, such as troubleshooting 
+previous requirements-related problems, mapping terminology and deliverables, performing assessments, and arranging training classes for the project team.
+
+A real-life example of the benefits of a high-quality requirements process is the development of the iPhone. Apple spent a significant amount of 
+time upfront gathering requirements from users and stakeholders, ensuring that the product was aligned with customer needs and desires. 
+As a result, the iPhone was a massive success, meeting and exceeding customer expectations, and setting a new standard for smartphones. 
+By investing in good requirements practices, Apple was able to deliver a high-quality product that satisfied its customers, leading to increased revenue and market share.
+
+

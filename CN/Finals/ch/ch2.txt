@@ -1,0 +1,129 @@
+In networking, a node is a general-purpose computer that can serve various functions within a network. It can be a desktop workstation, a multiprocessor, or a PC. Nodes in a network can act as hosts, switches, or routers, depending on their configuration and purpose.
+
+The primary functions of nodes in a network are as follows:
+
+1. **Host**: A node can function as a host where users run application programs. In this role, it acts as an end-user device, running applications and communicating with other nodes over the network.
+
+2. **Switch**: Some nodes, typically located inside the network, can work as switches. These switches forward messages from one link to another, allowing data to flow efficiently between different parts of the network.
+
+3. **Router**: Nodes can also be configured as routers, responsible for forwarding internet packets from one network to another. Routers play a crucial role in directing data across different networks in the larger internet infrastructure.
+
+In certain cases, network nodes, especially switches or routers, may be implemented using special-purpose hardware. This is done for reasons of performance and cost-efficiency. Custom hardware can perform specific functions faster and more cost-effectively than a general-purpose processor.
+
+However, the basic functions of these nodes are first described as if they were being implemented in software on a general-purpose workstation. Later, the discussion explains why and how certain functionality might instead be implemented using specialized hardware.
+
+It is essential to recognize that network nodes have finite memory, and memory management becomes critical in providing fair network capacity to each user. When forwarding packets, they need to buffer data in memory while waiting for its turn to be transmitted over an outgoing link.
+
+Regarding the network adaptor component of a node, it serves as an intermediary between the node and the link. It is responsible for transmitting data from the workstation to the link and vice versa. Network adaptors implement various networking functionalities, such as frame segmentation, error detection, and fairness rules for sharing a link among multiple workstations.
+
+Network adaptors typically have two main components: a bus interface that communicates with the host and a link interface that communicates with the link. The adaptor exports a control status register (CSR) that the CPU can read and write to instruct the adaptor for data transmission and reception. Adaptors use either Direct Memory Access (DMA) or Programmed I/O (PIO) mechanisms for data transfer between the adaptor and host memory.
+
+Overall, understanding the hardware building blocks and their limitations is crucial for designing efficient and high-performance networks. Memory bandwidth, CPU performance, and adaptors' capabilities significantly impact network performance, and network designers must carefully consider these factors to achieve optimal network performance.
+
+Network links are implemented using various physical media, such as twisted pair, coaxial cable, optical fiber, and wireless space. The signals transmitted through these links are electromagnetic waves that propagate at the speed of light, although their speed may vary depending on the medium (e.g., copper and fiber have different speeds).
+
+The properties of an electromagnetic wave are characterized by its frequency and wavelength. Frequency is measured in hertz (Hz), representing the number of oscillations per second, while wavelength is the distance between two adjacent maxima or minima of the wave. The relationship between speed, frequency, and wavelength is given by the formula:
+
+Wavelength = SpeedOfLight / Frequency
+
+The electromagnetic spectrum spans a wide range of frequencies, from radio waves to gamma rays, and various media are commonly used to carry specific frequency bands. Figure 2.4 provides an overview of the electromagnetic spectrum and the associated frequency bands used for communication.
+
+The process of encoding binary data (1s and 0s) onto electromagnetic signals is complex and involves modulation techniques. However, for the purpose of understanding links as building blocks for computer networks, we can simplify the discussion by assuming that binary data can be encoded into two distinguishable signals—a "high" and a "low."
+
+Another important attribute of a link is its duplexity, which determines how many bitstreams can be transmitted on it simultaneously. In full-duplex links, two bitstreams can be sent simultaneously in both directions, while in half-duplex links, data can flow in only one direction at a time, requiring the connected nodes to take turns using the link. For the context of this book, all point-to-point links are assumed to be full-duplex.
+
+Finally, obtaining a network link depends on factors like the required reach, available budget, and type of medium used. Different link types may be used to build a computer network, and the choice of link depends on the specific needs of the network being constructed.
+
+Encoding is the process of converting binary data (1s and 0s) into signals that can be transmitted over physical links in a computer network. Several encoding schemes are used to achieve this, each with its advantages and disadvantages. Let's look at some of the common encoding schemes:
+
+1. Non-Return-to-Zero (NRZ): In NRZ encoding, the data value 1 is mapped onto a high signal, and the data value 0 is mapped onto a low signal. This is the most straightforward encoding scheme. However, it suffers from baseline wander and clock recovery issues, particularly when there are long sequences of consecutive 1s or 0s.
+
+2. Non-Return-to-Zero Inverted (NRZI): NRZI solves the problem of consecutive 1s by making a signal transition from the current signal to encode a 1 and staying at the current signal level to encode a 0. It addresses baseline wander but still faces issues with consecutive 0s.
+
+3. Manchester Encoding: Manchester encoding merges the clock with the signal by transmitting the exclusive-OR of the NRZ-encoded data and the clock. It provides a clock recovery mechanism by ensuring frequent signal transitions. However, it reduces the bit rate to half of the baud rate, making it less efficient.
+
+4. 4B/5B Encoding: This encoding scheme attempts to improve efficiency while breaking up long sequences of consecutive 1s or 0s. It encodes every 4 bits of data into a 5-bit code, where each 5-bit code has no more than one leading 0 and no more than two trailing 0s. It then uses NRZI encoding to transmit the 5-bit codes. This encoding achieves 80% efficiency and is used in some high-speed network interfaces.
+
+Different encoding schemes have their trade-offs in terms of efficiency, clock recovery, and susceptibility to errors. The choice of encoding scheme depends on the specific requirements of the network and the characteristics of the physical link being used.
+
+Framing is the process of dividing data into frames, which are blocks of data exchanged between nodes in a computer network. Different framing protocols are used to mark the start and end of frames, ensuring that the receiver can distinguish individual frames correctly. Here are some of the framing protocols commonly used:
+
+1. Sentinel-Based Framing: In sentinel-based framing, special characters (sentinels) are used to indicate the beginning and end of frames. Examples of protocols that use this approach include Binary Synchronous Communication (BISYNC) and Point-to-Point Protocol (PPP). Sentinel-based framing often requires character or bit stuffing to handle cases where the sentinel character appears within the frame's data, which can lead to inefficiency.
+
+2. Byte-Counting Approach: The byte-counting approach involves including the number of bytes in the frame as a header field. Protocols like Digital Data Communication Message Protocol (DDCMP) use this method. However, it faces the challenge of handling framing errors if the count field gets corrupted.
+
+3. Clock-Based Framing (SONET): In clock-based framing, the receiver uses the sender's clock to detect the beginning of frames. The Synchronous Optical Network (SONET) is an example of a clock-based framing approach. SONET uses a special bit pattern that repeats regularly in the frame, allowing the receiver to identify frame boundaries without bit stuffing.
+
+Each framing approach has its strengths and weaknesses, and the choice of a framing protocol depends on the specific requirements of the network and the characteristics of the physical link being used.
+
+
+Sure! Let's delve deeper into the details and provide a more comprehensive understanding of Ethernet.
+
+1. **Carrier Sense Multiple Access with Collision Detection (CSMA/CD)**:
+   - CSMA/CD is the protocol used by Ethernet to control access to the shared communication medium (e.g., coaxial cable) among multiple nodes (hosts).
+   - "Carrier Sense" means that nodes listen to the communication medium to detect whether it is idle (no other transmissions) or busy (other nodes are transmitting).
+   - "Multiple Access" indicates that multiple nodes share the same communication medium, and they need to coordinate to avoid collisions when transmitting.
+   - "Collision Detection" enables nodes to detect collisions (simultaneous transmissions by multiple nodes) and take appropriate actions to resolve them.
+
+2. **Ethernet Frame Format**:
+   - An Ethernet frame consists of a 64-bit preamble, which helps receivers synchronize with the incoming signal.
+   - The source and destination addresses are 48-bit MAC addresses that uniquely identify the source and destination nodes.
+   - The packet type field (or length field in 802.3) indicates the higher-level protocol to which the frame should be delivered.
+   - The data field contains the payload, which can vary in size but is typically up to 1,500 bytes (minimum frame size is 46 bytes).
+   - A 32-bit CRC (Cyclic Redundancy Check) is used for error detection, ensuring data integrity during transmission.
+
+3. **Ethernet Addresses (MAC Addresses)**:
+   - Each Ethernet adaptor has a unique 48-bit MAC address, typically burned into ROM.
+   - The address is represented as six pairs of hexadecimal digits separated by colons (e.g., 00:1A:2B:3C:4D:5E).
+   - Unicast addresses represent individual nodes. Broadcast addresses are all 1s and are used to send frames to all hosts on the Ethernet. Multicast addresses represent a subset of hosts on the Ethernet.
+
+4. **Transmitter Algorithm**:
+   - When a node has a frame to send and the communication medium is idle, it transmits the frame immediately.
+   - If the medium is busy, the node waits for it to become idle before transmitting (1-persistent protocol).
+   - Collisions occur when multiple nodes attempt to transmit simultaneously. The transmitting nodes detect the collision, send a jamming signal, and retransmit later using exponential backoff.
+
+5. **Physical Properties**:
+   - Ethernet segments are implemented using various cable types, including coaxial cable (10Base5), thin coaxial cable (10Base2), and twisted-pair cable (10BaseT).
+   - Maximum segment lengths vary based on cable type, typically ranging from 185 meters (10Base5) to 100 meters (10BaseT).
+   - Repeaters are used to extend the network by connecting multiple segments.
+
+6. **Limitations and Performance**:
+   - Ethernet works best under lightly loaded conditions, as heavy loads can lead to increased collisions and decreased efficiency.
+   - Modern Ethernet technologies, such as Fast Ethernet (100 Mbps) and Gigabit Ethernet (1000 Mbps), have been introduced to provide higher performance.
+
+7. **Success and Adoption**:
+   - Ethernet's simplicity, ease of administration, and cost-effectiveness have made it widely adopted and successful for local area networking.
+   - Switched Ethernet technologies have been developed to improve performance and address some of the limitations of traditional shared Ethernet.
+
+In summary, Ethernet is a widely used LAN technology that employs the CSMA/CD protocol to allow multiple nodes to share a common communication medium. It uses MAC addresses to uniquely identify nodes and handles collision detection and resolution to ensure efficient data transmission. Despite some limitations, Ethernet's ease of administration and cost-effectiveness have made it a popular choice for networking solutions.
+
+
+This section discusses ring-based network technologies, such as IBM Token Ring (802.5), Fiber Distributed Data Interface (FDDI), and Resilient Packet Ring (RPR). Ring networks, like Ethernet, are shared-media networks, but they have different access control mechanisms.
+
+1. **IBM Token Ring (802.5)**:
+   - IBM Token Ring was based on the IEEE 802.5 standard and was prevalent for a time.
+   - The network consists of nodes connected in a ring, with data flowing in one direction.
+   - Access to the ring is managed using a token that circulates around the ring.
+   - When a node has data to transmit, it seizes the token, adds its data to the ring, and then releases the token for the next node.
+   - Token Ring networks used Multistation Access Units (MSAUs) to connect stations to the ring. These MSAUs can bypass a station that has failed.
+
+2. **Fiber Distributed Data Interface (FDDI)**:
+   - FDDI is similar to IBM Token Ring but runs on optical fiber instead of copper.
+   - It uses a dual ring, with data transmitted in opposite directions for resiliency.
+   - Stations in the network collectively maintain the ring's health; any node can initiate the process of becoming the monitor.
+   - FDDI supports synchronous and asynchronous traffic, allowing nodes to transmit time-sensitive data when necessary.
+
+3. **Resilient Packet Ring (RPR - 802.17)**:
+   - RPR is a more recent technology designed for service provider networks.
+   - Like FDDI, it uses dual counterrotating fiber rings, but both rings are utilized during normal operation for higher bandwidth efficiency.
+   - RPR does not use tokens but employs a technique called buffer insertion, allowing nodes to transmit their own frames when idle.
+   - It provides mechanisms for resiliency in case of link or node failures, including wrapping (similar to FDDI) and steering, which directs packets around failures.
+
+4. **QoS Support in RPR**:
+   - RPR supports three QoS classes: Class A (low latency, low jitter), Class B (predictable latency, jitter), and Class C (best-effort transport).
+   - It implements sophisticated fairness mechanisms to prevent one node from hogging the link indefinitely.
+   - RPR can run over existing physical layers, such as SONET or Ethernet, making it versatile and easier to deploy.
+
+Although Token Ring and FDDI are no longer widely used, RPR has found some deployment in metropolitan area networks (MANs), primarily due to its resiliency and QoS support. However, as with previous ring technologies, RPR's future popularity remains uncertain, with other technologies like metro Ethernet gaining traction.
+
+

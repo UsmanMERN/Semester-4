@@ -1,0 +1,120 @@
+
+what is internet and www(world wide web)
+The Internet is a global network of interconnected computers and devices that allows people to communicate and share information.
+The World Wide Web, on the other hand, is a system of interlinked hypertext documents accessed via the Internet.
+It was created in 1989 by computer scientist Tim Berners-Lee as a way for scientists to easily share research papers
+and other documents. 
+Today, the World Wide Web has become an essential tool for communication, commerce, entertainment, and information 
+sharing around the world.
+
+
+
+Why study Computer Networks..?
+There are several reasons why studying computer networks is important:
+
+Communication: Computer networks enable communication between devices, which is a vital aspect of modern computing.
+Without computer networks, it would be difficult for devices to communicate with each other and share information.
+
+Resource Sharing: Computer networks allow resources such as printers, storage devices, and software applications 
+to be shared between multiple devices. This can lead to increased efficiency and cost savings for organizations.
+
+Business Opportunities: Computer networks have created new business opportunities in areas such as e-commerce,
+online advertising, and digital content delivery. Understanding how computer networks work can help individuals 
+and businesses take advantage of these opportunities.
+
+Security: Computer networks are vulnerable to security threats such as hacking, malware, and viruses. 
+Studying computer networks can help individuals and organizations understand these threats and implement 
+appropriate security measures.
+
+Career Opportunities: There is a growing demand for professionals with expertise in computer networking.
+Studying computer networks can lead to career opportunities in areas such as network administration, 
+network engineering, and cybersecurity.
+
+
+
+
+
+Network protocols are a set of rules and standards used to establish communication between devices on the network.
+‎‭‬Here are some key concepts you should understand when it comes to network protocols:
+
+Types of network protocols: There are many types of network protocols, including Transmission Control Protocol (TCP), 
+Internet Protocol (IP), User Datagram Protocol (UDP), File Transfer Protocol (FTP), Simple Mail Transfer Protocol (SMTP), 
+and Hypertext Transfer Protocol (HTTP).
+
+Layers of network protocols: Network protocols are typically organized into layers, with each layer responsible for a 
+specific aspect of network communication. The most commonly used model is the OSI model, which consists of seven layers:
+Physical, Data Link, Network, Transport, Session, Presentation, and Application.
+
+Protocol headers: Each protocol adds its own header to the data being transmitted, 
+containing information such as the source and destination IP addresses, port numbers, and other relevant data.
+
+Handshaking: Many network protocols use a process called handshaking to establish a connection between two devices.
+This involves a series of messages sent between the devices to negotiate things like the type of protocol to use, 
+the size of data packets, and other details.
+
+Error detection and correction: To ensure data integrity, many protocols include mechanisms for error detection and correction.
+For example, TCP uses a checksum to verify the integrity of the data being transmitted.
+
+Security protocols: Some network protocols include security features to protect against unauthorized access or data theft.
+For example, SSL/TLS is a widely-used protocol for securing web connections.
+
+
+
+
+
+
+it is important to understand the core principles that have shaped popular networking protocols.
+Here are some of the most important principles:
+
+Interoperability: Networking protocols must be able to work with different types of hardware and software from different vendors
+in order to ensure compatibility between different devices on the network.
+
+Scalability: Networking protocols must be able to scale as the size of the network grows, without compromising performance 
+or reliability.
+
+Reliability: Networking protocols must be designed to provide reliable communication even in the face of errors or failures 
+in the network.
+
+Security: Networking protocols must be designed with security in mind, ensuring that data transmitted over the network is 
+protected from unauthorized access or tampering.
+
+Efficiency: Networking protocols must be designed to minimize the amount of data that needs to be transmitted over the network, 
+in order to maximize performance and minimize costs.
+
+Simplicity: Networking protocols should be as simple as possible while still meeting the requirements of the network, 
+in order to make them easier to implement and maintain.
+
+These principles have been instrumental in shaping popular networking protocols such as TCP/IP, HTTP, FTP, and SMTP, 
+among others. As a teacher of networking, it is important to emphasize these principles when discussing 
+networking protocols with your students, as they form the foundation of modern network design and implementation.
+
+
+Sure, let me explain each principle with a real-life example:
+
+Interoperability: Imagine you have a laptop made by one manufacturer and a printer made by another. In order for them to work together
+on a network, the networking protocols they use must be compatible with each other. For example, if your laptop uses TCP/IP protocol to 
+communicate with the printer, then the printer must also support TCP/IP protocol in order for the two devices to communicate effectively.
+
+Scalability: Consider a company that has started with just a few computers on the network but as it grows, it adds more computers, printers,
+servers, and other devices to the network. The networking protocols must be able to scale as the size of the network grows without impacting
+performance and reliability. For example, TCP/IP is designed to manage communication between large numbers of devices on a network without
+compromising performance or reliability.
+
+Reliability: When sending data over a network, errors can occur due to various reasons such as network congestion, hardware failures, 
+or software bugs. Networking protocols must be designed to provide reliable communication even in the face of errors or failures in the network.
+For example, the TCP protocol checks whether all the packets sent from one device to another have been received and re-sends any missing packets,
+ensuring that the data is delivered reliably.
+
+Security: With the increasing amount of sensitive information being transmitted over networks, security has become a critical concern. 
+Networking protocols must be designed with security in mind, ensuring that data transmitted over the network is protected from unauthorized 
+access or tampering. For example, HTTPS is a secure variant of HTTP that uses SSL/TLS encryption to protect sensitive data such as credit card numbers
+or login credentials from being intercepted by hackers.
+
+Efficiency: When transmitting data over a network, bandwidth is a limited resource, and the amount of data that needs to be transferred should be minimized 
+to maximize performance and minimize costs. Networking protocols must be designed to minimize the amount of data that needs to be transmitted over the network. 
+For example, the compression algorithms used by the HTTP protocol can reduce the size of web pages and other resources, making them faster to load.
+
+Simplicity: Networking protocols should be as simple as possible while still meeting the requirements of the network, in order to make them easier to 
+implement and maintain. Simple protocols are also less prone to errors and vulnerabilities, making them more secure. For example, the DNS protocol, 
+which is used to translate domain names into IP addresses, is relatively simple and has been in use for decades without significant changes.
+
