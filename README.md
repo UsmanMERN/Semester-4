@@ -55,9 +55,7 @@ If you have more books to add or want to suggest improvements, feel free to cont
 
 **Department:** Software Engineering
 
-## License
 
-This project is licensed under the [MIT License](LICENSE.md).
 
 ## Disclaimer
 
