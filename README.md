@@ -1,6 +1,3 @@
-To make the repository structure look more organized and visually appealing, you can use markdown formatting in the README.md file to create a table of contents for the courses. Here's how the revised structure might look:
-
-```markdown
 # Semester 4 Books Repository
 
 Welcome to the Semester 4 Books Repository! This repository contains the list of books used for the courses in my current semester.
@@ -63,6 +60,3 @@ The books listed in this repository are for educational purposes only. Ensure th
 
 ---
 By creating this repository, my intention is to make the study materials easily accessible for fellow students and foster a collaborative environment. Enjoy your learning journey! 📚
-```
-
-In this revised version, I've created a table of contents for the courses, which allows users to easily navigate to the specific course they are interested in. The updated README.md structure should make the repository look more organized and user-friendly.
