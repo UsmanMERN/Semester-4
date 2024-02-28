@@ -1,5 +1,3 @@
-Certainly! Here's a comprehensive README.md for your Semester 4 Books Repository:
-
 ---
 
 # Semester 4 Books Repository
